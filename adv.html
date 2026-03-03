@@ -3,148 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Partners | Smith & Partners | International Litigation</title>
+    <title>The Partners | Smith & Partners Global</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { --navy: #0F172A; --gold: #C5A059; }
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         
-        .hero-gradient {
-            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-        }
+        /* NAVIGATION SYNC - DO NOT TOUCH */
+        .nav-link { position: relative; transition: color 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: var(--gold); transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+        .active-link::after { width: 100%; }
 
-        /* Fixed Image Size Styling */
-        .partner-image-container {
-            max-width: 450px; /* Limits the size of the image */
-            margin: 0 auto;
-        }
+        /* THEME CORE: Brutalist Prestige */
+        .partner-card { border: 1px solid #e2e8f0; background: white; transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+        .partner-card:hover { border-color: var(--gold); transform: translateY(-10px); box-shadow: 0 40px 70px -15px rgba(15, 23, 42, 0.2); }
+        .image-container { position: relative; overflow: hidden; background: var(--navy); }
+        .partner-img { filter: grayscale(100%) contrast(110%); transition: all 0.8s ease; object-fit: cover; }
+        .partner-card:hover .partner-img { filter: grayscale(0%) contrast(100%); transform: scale(1.05); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="antialiased text-slate-900">
 
-    <div class="bg-[#0F172A] text-white py-2.5 text-[9px] font-black uppercase tracking-[0.2em] border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <span><i class="fa-solid fa-gavel mr-2 text-[#C5A059]"></i> Attorney Advertising</span>
-            <span class="hidden md:block italic text-slate-400">London • New York • Washington D.C.</span>
-        </div>
-    </div>
-
-    <nav class="bg-white border-b sticky top-0 z-50">
+    <nav class="bg-[#0F172A] text-white sticky top-0 z-50 border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <div class="flex flex-col text-left">
-                <span class="text-2xl font-black uppercase tracking-tighter text-[#0F172A] leading-none">Smith & Partners</span>
+            <a href="index.html" class="flex flex-col">
+                <span class="text-2xl font-black uppercase tracking-tighter leading-none">Smith & Partners</span>
                 <span class="text-[9px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-12 text-[10px] font-black uppercase tracking-[0.3em]">
+                <a href="index.html" class="nav-link hover:text-[#C5A059]">Home</a>
+                <a href="adv.html" class="nav-link text-[#C5A059] active-link">Meet Our Attorneys</a>
+                <a href="expertise.html" class="nav-link hover:text-[#C5A059]">Practice Areas</a>
+                <a href="newz.html" class="nav-link hover:text-[#C5A059]">In The News</a>
             </div>
-            <div class="hidden lg:flex items-center gap-10 text-[11px] font-extrabold uppercase tracking-widest text-[#0F172A]">
-                <a href="#" class="hover:text-[#C5A059] transition">Overview</a>
-                <a href="#" class="text-[#C5A059] border-b-2 border-[#C5A059] pb-1">Our Partners</a>
-                <a href="#" class="hover:text-[#C5A059] transition">Expertise</a>
-                <a href="#" class="bg-[#0F172A] text-white px-7 py-3.5 hover:bg-[#C5A059] transition shadow-lg">Conflict Check</a>
+
+            <div>
+                <a href="#lead-capture" class="bg-[#C5A059] text-[#0F172A] px-8 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-white transition shadow-xl">
+                    Conflict Check
+                </a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-gradient py-24 text-white">
+    <header class="bg-[#0F172A] text-white py-32 border-b border-[#C5A059]/30">
         <div class="max-w-7xl mx-auto px-6">
-            <span class="text-[#C5A059] font-bold uppercase tracking-[0.3em] text-[10px]">Managing Partner Profile</span>
-            <h1 class="text-5xl md:text-6xl font-black mt-4 max-w-4xl leading-tight">
-                Global Leadership. <br><span class="italic font-light text-slate-400">Unrivaled Expertise.</span>
+            <span class="text-[#C5A059] font-black tracking-[0.5em] text-[11px] uppercase block mb-6">The Senior Bar</span>
+            <h1 class="text-7xl md:text-9xl font-black leading-[0.85] tracking-tighter uppercase">
+                The <br><span class="italic font-light text-slate-400">Architects.</span>
             </h1>
         </div>
     </header>
 
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-12 items-start">
-                
-                <div class="lg:col-span-4">
-                    <div class="partner-image-container mb-8">
-                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format&fit=crop&q=80" 
-                                 alt="Jhonson Smith" 
-                                 class="w-full h-auto object-cover grayscale hover:grayscale-0 transition duration-500">
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white p-8 border border-slate-200 shadow-sm rounded-lg">
-                        <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5A059] mb-4">Contact Information</h4>
-                        <p class="text-sm font-bold text-[#0F172A]">j.smith@smithpartners.com</p>
-                        <p class="text-sm text-slate-500 mt-1">+1 (212) 555-0198</p>
-                        <button class="w-full mt-6 bg-[#0F172A] text-white py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-[#C5A059] transition">
-                            Schedule Consultation
-                        </button>
-                    </div>
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="partner-card group">
+                <div class="image-container aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" class="partner-img w-full h-full">
                 </div>
-
-                <div class="lg:col-span-8">
-                    <span class="text-[#C5A059] font-black tracking-[0.4em] text-[11px] uppercase block mb-2">Senior Partner — New York</span>
-                    <h2 class="text-5xl font-black text-[#0F172A] mb-6 tracking-tight">Jhonson Smith, J.D.</h2>
-                    
-                    <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-6">
-                        <p class="text-lg">
-                            With over 25 years of experience in international arbitration and high-stakes commercial litigation, Jhonson Smith has built a reputation for navigating the world’s most complex legal landscapes.
-                        </p>
-                        <p>
-                            Prior to founding Smith & Partners, Mr. Smith served as Lead Counsel for numerous Fortune 100 companies, successfully resolving disputes totaling over $12B in aggregate value. His approach combines aggressive courtroom advocacy with a sophisticated understanding of geopolitical regulatory shifts.
-                        </p>
-                    </div>
-
-                    <div class="mt-12">
-                        <h3 class="text-2xl font-bold text-[#0F172A] mb-6">Representative Matters</h3>
-                        <div class="space-y-4">
-                            <div class="p-5 bg-white border-l-4 border-[#C5A059] shadow-sm">
-                                <p class="text-sm font-bold text-[#0F172A]">Cross-Border Energy Dispute</p>
-                                <p class="text-xs text-slate-500 mt-1">Represented a European energy conglomerate in a $1.2B ICC arbitration regarding infrastructure assets in South America.</p>
-                            </div>
-                            <div class="p-5 bg-white border-l-4 border-[#C5A059] shadow-sm">
-                                <p class="text-sm font-bold text-[#0F172A]">White-Collar Defense</p>
-                                <p class="text-xs text-slate-500 mt-1">Successfully defended a major financial institution in a multi-jurisdictional regulatory investigation by the DOJ and FCA.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-10 mt-12 pt-10 border-t border-slate-200">
-                        <div>
-                            <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-[#0F172A] mb-5">Professional Admissions</h4>
-                            <ul class="space-y-3 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> New York State Bar</li>
-                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Southern District of NY</li>
-                                <li><i class="fa-solid fa-check text-[#C5A059] mr-2"></i> Supreme Court of the U.S.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-[#0F172A] mb-5">Education</h4>
-                            <ul class="space-y-3 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-                                <li><i class="fa-solid fa-graduation-cap text-[#C5A059] mr-2"></i> Harvard Law School, J.D.</li>
-                                <li><i class="fa-solid fa-graduation-cap text-[#C5A059] mr-2"></i> Oxford University, LL.M.</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="p-10">
+                    <span class="text-[9px] font-black text-[#C5A059] uppercase tracking-[0.3em]">Managing Partner</span>
+                    <h3 class="text-3xl font-black text-[#0F172A] mt-2 mb-4 uppercase tracking-tighter">Sterling Vance</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed italic">Lead Strategist for Multi-Jurisdictional Litigation.</p>
                 </div>
-
             </div>
+            </div>
+    </section>
+
+    <section id="lead-capture" class="py-32 bg-[#0F172A] text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black uppercase italic tracking-tighter mb-4">Initial <span class="text-[#C5A059]">Intake.</span></h2>
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-[0.4em]">Confidential Lead Submission for Conflict Review</p>
+            </div>
+
+            <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white/5 p-12 rounded border border-white/10 backdrop-blur-sm">
+                <div class="flex flex-col gap-2">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-[#C5A059]">Full Name / Entity</label>
+                    <input type="text" name="name" required class="bg-transparent border-b border-white/20 py-3 outline-none focus:border-[#C5A059] transition text-sm">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-[#C5A059]">Email Address</label>
+                    <input type="email" name="email" required class="bg-transparent border-b border-white/20 py-3 outline-none focus:border-[#C5A059] transition text-sm">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-[#C5A059]">Nature of Inquiry</label>
+                    <select name="type" class="bg-transparent border-b border-white/20 py-3 outline-none focus:border-[#C5A059] transition text-sm text-slate-400">
+                        <option value="corporate">Corporate Litigation</option>
+                        <option value="defense">White Collar Defense</option>
+                        <option value="ma">M&A Advisory</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-[#C5A059]">Urgency Level</label>
+                    <select name="urgency" class="bg-transparent border-b border-white/20 py-3 outline-none focus:border-[#C5A059] transition text-sm text-slate-400">
+                        <option value="immediate">Immediate Attention</option>
+                        <option value="standard">Standard Review</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2 flex flex-col gap-2">
+                    <label class="text-[10px] font-black uppercase tracking-widest text-[#C5A059]">Brief Case Overview (Confidential)</label>
+                    <textarea name="message" rows="4" class="bg-transparent border border-white/20 p-4 outline-none focus:border-[#C5A059] transition text-sm rounded"></textarea>
+                </div>
+                <div class="md:col-span-2">
+                    <button type="submit" class="w-full bg-[#C5A059] text-[#0F172A] font-black py-6 uppercase tracking-[0.3em] text-xs hover:bg-white transition duration-500 shadow-2xl">
+                        Submit for Secure Conflict Check
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
 
-    <footer class="bg-[#0F172A] text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <span class="text-xl font-black uppercase tracking-widest">Smith & Partners</span>
-            <div class="flex flex-wrap justify-center gap-8 mt-10 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                <a href="#" class="hover:text-white transition">London</a>
-                <a href="#" class="hover:text-white transition">New York</a>
-                <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition">Terms of Service</a>
+    <footer class="bg-[#0F172A] text-white py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-[9px] font-black uppercase tracking-[0.3em] text-slate-500">
+            <span>&copy; 2026 Smith & Partners LLP.</span>
+            <div class="flex gap-8 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Legal Disclaimer</a>
             </div>
-            <p class="mt-10 text-[9px] text-slate-500 uppercase tracking-widest">
-                &copy; 2026 Smith & Partners. Professional Excellence in Litigation.
-            </p>
         </div>
     </footer>
 
