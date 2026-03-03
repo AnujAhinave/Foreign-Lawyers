@@ -21,6 +21,27 @@
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocate [Name] | International Legal Counsel & Advisor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .gold-accent { color: #C5A059; }
+        .bg-navy { background-color: #0F172A; }
+        .legal-card:hover { border-top: 4px solid #C5A059; transition: all 0.3s ease; }
+        #thank-you-page { display: none; }
+        .scroll-mt-20 { scroll-margin-top: 5rem; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
 
     <nav class="sticky top-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-white/10 text-white">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -28,22 +49,127 @@
                 <span class="text-xl font-black tracking-tight uppercase leading-none">Adv. [Full Name]</span>
                 <span class="text-[9px] tracking-[0.3em] gold-accent font-bold uppercase mt-1 italic">Legal Excellence & Integrity</span>
             </div>
-            <div class="hidden lg:flex items-center gap-10 text-[11px] font-bold uppercase tracking-widest opacity-80">
-                <button onclick="manualScroll('home-top')" class="hover:gold-accent transition">Home</button>
-                <a href="about.html" class="hover:gold-accent transition">Professional Bio</a>
-                <a href="practice.html" class="hover:gold-accent transition">Practice Areas</a>
-                <button onclick="manualScroll('contact')" class="hover:gold-accent transition">Inquiry</button>
+
+            <div class="hidden lg:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest opacity-80">
+                <a href="about.html" class="hover:gold-accent transition">Meet Our Attorneys</a>
+                <a href="practice.html" class="hover:gold-accent transition">Practice Areas & FAQs</a>
+                <button onclick="manualScroll('contact')" class="hover:gold-accent transition">Free Case Review</button>
+                <a href="news.html" class="text-[#C5A059] hover:text-white transition italic">In The News</a>
+                <a href="reviews.html" class="hover:gold-accent transition">Client Reviews</a>
             </div>
+
             <div class="flex items-center gap-4">
                 <a href="tel:9969590101" class="hidden sm:block border border-white/20 px-4 py-2 rounded text-[10px] font-bold tracking-widest hover:border-white transition">
                     +91 9969590101
                 </a>
-                <button onclick="manualScroll('contact')" class="bg-[#C5A059] text-[#0F172A] px-6 py-2.5 rounded text-[11px] font-black uppercase tracking-widest hover:bg-white transition">
-                    Request Brief
+                <button onclick="manualScroll('contact')" class="bg-[#C5A059] text-[#0F172A] px-6 py-2.5 rounded text-[11px] font-black uppercase tracking-widest hover:bg-white transition shadow-lg">
+                    Free Case Review
                 </button>
             </div>
         </div>
     </nav>
+
+    <header id="home-top" class="bg-[#0F172A] text-white py-24 relative overflow-hidden border-b border-[#C5A059]/30 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-2/3">
+                <span class="gold-accent font-black tracking-[0.4em] text-[10px] uppercase">International Legal Counsel</span>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mt-4 italic">Strategic Legal <br><span class="gold-accent">Representation.</span></h1>
+                <p class="text-slate-400 text-lg mt-8 max-w-xl leading-relaxed italic">
+                    Providing comprehensive legal guidance for domestic litigation and international corporate counsel, rooted in a decade of judicial excellence.
+                </p>
+                <div class="mt-12 flex flex-wrap gap-6">
+                    <button onclick="manualScroll('contact')" class="border-2 border-white px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#0F172A] transition">
+                        Free Case Review
+                    </button>
+                    <a href="practice.html" class="gold-accent px-8 py-4 font-bold uppercase tracking-widest text-xs border-b border-[#C5A059]">
+                        Explore Practice Areas <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/3 hidden md:block">
+                <div class="border-4 border-[#C5A059]/20 p-4 rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&q=80&w=500" class="grayscale hover:grayscale-0 transition duration-700 rounded shadow-2xl" alt="Advocate Portrait">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="practice" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold uppercase tracking-tighter">Areas of <span class="gold-accent italic">Practice</span></h2>
+                <div class="w-16 h-1 bg-[#C5A059] mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-10 border border-slate-100 bg-slate-50 rounded-lg legal-card">
+                    <i class="fas fa-balance-scale gold-accent text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Corporate & Commercial</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Advising on cross-border transactions, contract drafting, and regulatory compliance for international entities.</p>
+                </div>
+                <div class="p-10 border border-slate-100 bg-slate-50 rounded-lg legal-card">
+                    <i class="fas fa-gavel gold-accent text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-pink-700">Civil & Criminal Litigation</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Strong representation in Indian courts, focused on efficient resolution and high-stakes defense strategies.</p>
+                </div>
+                <div class="p-10 border border-slate-100 bg-slate-50 rounded-lg legal-card">
+                    <i class="fas fa-copyright gold-accent text-3xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Intellectual Property</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">Protecting global assets through trademark registration, IP litigation, and licensing agreements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-[#0F172A] text-white py-24 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold mb-8 italic uppercase">Contact the Chambers</h2>
+                <p class="text-slate-400 mb-12">By appointment only. Located in the heart of Kalyan for easy court access.</p>
+                <div class="space-y-6 text-sm">
+                    <div class="flex items-center gap-4"><i class="fas fa-map-marker-alt gold-accent"></i><span>Chamber No. 12, District Court, Kalyan - 421301</span></div>
+                    <div class="flex items-center gap-4"><i class="fas fa-phone gold-accent"></i><span>+91 9969590101</span></div>
+                </div>
+            </div>
+
+            <div id="inquiry-container" class="bg-white/5 p-10 rounded-lg border border-white/10">
+                <div id="inquiry-form">
+                    <h3 class="text-lg font-bold mb-6 gold-accent uppercase tracking-widest italic">Free Case Review Inquiry</h3>
+                    <p class="text-[10px] text-slate-500 mb-6 italic uppercase">Note: Per BCI rules, this is an informational portal only.</p>
+                    <form onsubmit="handleInquiry(event)" class="space-y-4">
+                        <input type="text" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded text-white outline-none focus:border-[#C5A059]">
+                        <input type="email" placeholder="Email Address" required class="w-full bg-white/5 border border-white/10 p-4 rounded text-white outline-none focus:border-[#C5A059]">
+                        <textarea placeholder="Nature of Legal Case" rows="4" required class="w-full bg-white/5 border border-white/10 p-4 rounded text-white outline-none focus:border-[#C5A059]"></textarea>
+                        <button class="w-full bg-[#C5A059] text-[#0F172A] font-black py-4 uppercase tracking-[0.2em] text-xs">Submit for Review</button>
+                    </form>
+                </div>
+                <div id="thank-you-page" class="text-center py-10">
+                    <div class="w-16 h-16 bg-[#C5A059] text-[#0F172A] rounded-full flex items-center justify-center text-3xl mx-auto mb-6"><i class="fas fa-check"></i></div>
+                    <h3 class="text-2xl font-bold gold-accent uppercase italic">Case Review Filed</h3>
+                    <p class="text-slate-400 mt-4 text-sm">Our chambers will review your informational request and respond within 24 business hours.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function manualScroll(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const navHeight = 80;
+                const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+        }
+        function handleInquiry(e) {
+            e.preventDefault();
+            document.getElementById('inquiry-form').style.display = 'none';
+            document.getElementById('thank-you-page').style.display = 'block';
+            manualScroll('contact');
+        }
+    </script>
+</body>
+</html>
 
     <header id="home-top" class="bg-[#0F172A] text-white py-24 relative overflow-hidden border-b border-[#C5A059]/30 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-16">
