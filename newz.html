@@ -42,24 +42,45 @@
     </div>
 
     <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
             <a href="index.html" class="flex flex-col text-left hover:opacity-80 transition">
-                <span class="text-2xl font-black uppercase tracking-tighter text-[#0F172A] leading-none">Smith & Partners</span>
-                <span class="text-[9px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
+                <span class="text-xl md:text-2xl font-black uppercase tracking-tighter text-[#0F172A] leading-none">Smith & Partners</span>
+                <span class="text-[8px] md:text-[9px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
             </a>
+            
             <div class="hidden lg:flex items-center gap-10 text-[11px] font-extrabold uppercase tracking-widest text-[#0F172A]">
                 <a href="index.html" class="hover:text-[#C5A059] transition">Overview</a>
                 <a href="adv.html" class="hover:text-[#C5A059] transition">Our Partners</a>
                 <a href="expertise.html" class="hover:text-[#C5A059] transition">Expertise</a>
                 <a href="newz.html" class="text-[#C5A059] border-b-2 border-[#C5A059] pb-1">News</a>
-                
                 <a href="adv.html#lead-intake" class="bg-[#0F172A] text-white px-7 py-3.5 hover:bg-[#C5A059] transition shadow-lg">
                     Conflict Check
                 </a>
             </div>
+
+            <div class="flex lg:hidden items-center gap-6">
+                <a href="adv.html#lead-intake" class="text-[#0F172A] text-lg">
+                    <i class="fa-solid fa-file-shield"></i>
+                </a>
+                <button id="menu-toggle" class="text-[#0F172A] text-xl p-2">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-overlay" class="fixed inset-0 bg-[#0F172A] z-[60] flex flex-col justify-center items-center transform translate-x-full transition-transform duration-500 lg:hidden">
+            <button id="close-menu" class="absolute top-8 right-8 text-white text-3xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex flex-col items-center gap-8 text-center">
+                <a href="index.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Overview</a>
+                <a href="adv.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Our Partners</a>
+                <a href="expertise.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Expertise</a>
+                <a href="newz.html" class="text-[#C5A059] text-2xl font-black uppercase tracking-[0.2em]">News</a>
+                <a href="adv.html#lead-intake" class="mt-4 border border-[#C5A059] text-[#C5A059] px-8 py-4 font-black uppercase tracking-widest text-xs">Conflict Check</a>
+            </div>
         </div>
     </nav>
-
     <header class="hero-news py-32 md:py-48 text-white relative">
         <div class="max-w-7xl mx-auto px-6">
             <span class="text-[#C5A059] font-bold uppercase tracking-[0.5em] text-[10px] block mb-6">Public Record & Global Intelligence</span>
@@ -147,5 +168,28 @@
         </div>
     </footer>
 
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        menuToggle.addEventListener('click', () => {
+            mobileOverlay.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden'; 
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileOverlay.classList.add('translate-x-full');
+            document.body.style.overflow = 'auto'; 
+        });
+
+        const mobileLinks = mobileOverlay.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileOverlay.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
 </body>
 </html>
