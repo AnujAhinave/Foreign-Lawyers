@@ -7,11 +7,12 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Outfit', sans-serif; background-color: #ffffff; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .heading-bold { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.02em; }
         .gold-accent { color: #C5A059; }
         .bg-navy { background-color: #0F172A; }
@@ -23,17 +24,27 @@
 </head>
 <body class="text-slate-900 antialiased">
 
-    <nav class="sticky top-0 z-50 bg-[#0F172A] text-white py-4 border-b border-white/10 shadow-xl">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <div class="flex flex-col text-left">
-                <span class="heading-bold text-lg uppercase leading-none">Adv. Anuj Ahinave</span>
-                <span class="text-[7px] gold-accent tracking-[0.4em] font-black uppercase mt-1 italic">Media & Press Desk</span>
+    <nav class="sticky top-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-white/10 text-white">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex flex-col hover:opacity-90 transition text-left">
+                <span class="text-xl font-black tracking-tight uppercase leading-none">Adv. Anuj Ahinave</span>
+                <span class="text-[9px] tracking-[0.3em] gold-accent font-bold uppercase mt-1 italic">Legal Excellence & Integrity</span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest opacity-80">
+                <a href="index.html" class="hover:gold-accent transition">Home</a>
+                <a href="about.html" class="hover:gold-accent transition">Meet Our Attorneys</a>
+                <a href="index.html#practice" class="hover:gold-accent transition">Practice Areas</a>
+                <a href="news.html" class="text-[#C5A059] hover:text-white transition italic">In The News</a>
             </div>
-            <div class="hidden lg:flex items-center gap-8 text-[9px] font-bold uppercase tracking-widest">
-                <a href="index.html" class="hover:text-[#C5A059] transition">Home</a>
-                <a href="index.html#practice" class="hover:text-[#C5A059] transition">Expertise</a>
-                <span class="text-white/20">|</span>
-                <span class="text-white/80">+91 9969590101</span>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:9969590101" class="hidden sm:block border border-white/20 px-4 py-2 rounded text-[10px] font-bold tracking-widest hover:border-white transition">
+                    +91 9969590101
+                </a>
+                <a href="index.html#contact" class="bg-[#C5A059] text-[#0F172A] px-6 py-2.5 rounded text-[8px] font-black uppercase tracking-widest hover:bg-white transition shadow-lg">
+                    Get Free Consultation
+                </a>
             </div>
         </div>
     </nav>
@@ -41,7 +52,7 @@
     <header class="bg-[#0F172A] text-white py-20 border-b border-[#C5A059]/30">
         <div class="max-w-7xl mx-auto px-6">
             <span class="gold-accent text-[10px] font-black uppercase tracking-[0.4em] mb-4 block italic">Public Record & Media</span>
-            <h1 class="heading-bold text-4xl md:text-6xl uppercase leading-tight">Judicial <br><span class="gold-accent italic">In The News.</span></h1>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight">Judicial <br><span class="gold-accent italic">In The News.</span></h1>
         </div>
     </header>
 
@@ -55,7 +66,7 @@
                             <span class="bg-[#0F172A] text-[#C5A059] text-[9px] font-black px-3 py-1 uppercase">Financial Express</span>
                             <span class="text-slate-400 text-[10px] font-bold uppercase">Oct 2025</span>
                         </div>
-                        <h2 class="heading-bold text-2xl uppercase mb-4">Major Recovery: ₹25 Crores Secured for Industrial Units</h2>
+                        <h2 class="text-2xl font-bold uppercase mb-4">Major Recovery: ₹25 Crores Secured for Industrial Units</h2>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6 italic">
                             In a landmark move for MSMEs in the Kalyan-Bhiwandi belt, Adv. Anuj Ahinave successfully navigated complex recovery suits under the MSMED Act, liquidating long-standing corporate debts.
                         </p>
@@ -69,7 +80,7 @@
                             <span class="bg-[#C5A059] text-[#0F172A] text-[9px] font-black px-3 py-1 uppercase">Legal Times</span>
                             <span class="text-slate-400 text-[10px] font-bold uppercase">Jan 2026</span>
                         </div>
-                        <h2 class="heading-bold text-2xl uppercase mb-4">MahaRERA Tribunal Orders Possession + Interest</h2>
+                        <h2 class="text-2xl font-bold uppercase mb-4">MahaRERA Tribunal Orders Possession + Interest</h2>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6 italic">
                             Representing a group of homeowners against developer negligence, the chambers secured a favorable possession mandate along with a 10.5% interest penalty on delays.
                         </p>
@@ -83,7 +94,7 @@
                             <span class="bg-[#0F172A] text-[#C5A059] text-[9px] font-black px-3 py-1 uppercase">Tech Law Journal</span>
                             <span class="text-slate-400 text-[10px] font-bold uppercase">Dec 2025</span>
                         </div>
-                        <h2 class="heading-bold text-2xl uppercase mb-4">Securing Global IP for Emerging SaaS Platforms</h2>
+                        <h2 class="text-2xl font-bold uppercase mb-4">Securing Global IP for Emerging SaaS Platforms</h2>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6 italic">
                             Adv. Ahinave's strategic drafting of Master Service Agreements (MSAs) has set a new standard for protecting intellectual property in cross-border tech transactions.
                         </p>
@@ -97,7 +108,7 @@
                             <span class="bg-slate-500 text-white text-[9px] font-black px-3 py-1 uppercase">District Press</span>
                             <span class="text-slate-400 text-[10px] font-bold uppercase">Sept 2025</span>
                         </div>
-                        <h2 class="heading-bold text-2xl uppercase mb-4">Strategic Defense Leads to High-Stakes Acquittal</h2>
+                        <h2 class="text-2xl font-bold uppercase mb-4">Strategic Defense Leads to High-Stakes Acquittal</h2>
                         <p class="text-slate-600 text-sm leading-relaxed mb-6 italic">
                             A complex criminal proceeding involving corporate misconduct ended in a favorable verdict after 14 months of rigorous judicial advocacy by the Kalyan-based defense team.
                         </p>
@@ -111,10 +122,10 @@
 
     <footer class="bg-[#0F172A] text-white py-20 text-center">
         <div class="max-w-2xl mx-auto px-6">
-            <h2 class="heading-bold text-3xl gold-accent mb-8 uppercase italic">Media Inquiry</h2>
+            <h2 class="text-3xl font-bold gold-accent mb-8 uppercase italic">Media Inquiry</h2>
             <p class="text-slate-400 text-sm mb-12">For press inquiries or case documentation requests, please contact the chambers directly.</p>
             <div class="border border-white/10 p-8">
-                <p class="heading-bold text-xl gold-accent">+91 9969590101</p>
+                <p class="text-xl font-bold gold-accent">+91 9969590101</p>
                 <p class="text-slate-500 text-[10px] uppercase tracking-widest mt-2">Kalyan District Court Chambers</p>
             </div>
         </div>
