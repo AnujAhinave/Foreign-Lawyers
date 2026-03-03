@@ -3,155 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Legal Team | Adv. [Name] & Associates</title>
+    <title>The Partners | Smith & Partners Global</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        :root { --navy: #0F172A; --gold: #C5A059; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .gold-accent { color: #C5A059; }
-        .bg-navy { background-color: #0F172A; }
-        .scroll-mt-24 { scroll-margin-top: 6rem; }
-        #thank-you-page { display: none; }
         
-        /* Profile Card Hover Effect */
-        .attorney-card:hover img { transform: scale(1.05); filter: grayscale(0); }
-        .attorney-card img { transition: all 0.7s ease; }
+        /* Refined Card Proportions */
+        .partner-card {
+            border: 1px solid #e2e8f0;
+            background: white;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .partner-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.15);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            background: var(--navy);
+            /* Changed from 3/4 to 4/5 for a more moderate height */
+            aspect-ratio: 4 / 3.5; 
+        }
+
+        .partner-img {
+            filter: grayscale(100%);
+            transition: all 0.8s ease;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .partner-card:hover .partner-img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+
+        .gold-line {
+            width: 30px;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.4s ease;
+        }
+
+        .partner-card:hover .gold-line {
+            width: 60px;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="antialiased text-slate-900">
 
-    <nav class="sticky top-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-white/10 text-white">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col text-left hover:opacity-90 transition">
-                <span class="text-lg md:text-xl font-black tracking-tight uppercase leading-none">Adv. Jhonson Smith </span>
-                <span class="text-[8px] md:text-[9px] tracking-[0.2em] gold-accent font-bold uppercase mt-1 italic">Legal Excellence & Integrity</span>
-            </a>
-
-            <div class="hidden lg:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest opacity-80">
-    <a href="index.html" class="hover:text-[#C5A059] transition">Home</a>
-    <a href="adv.html" class="hover:text-[#C5A059] transition">Meet Our Attorneys</a>
-    <a href="expertise.html" class="hover:text-[#C5A059] transition">Practice Areas</a>
-    <a href="newz.html" class="hover:text-[#C5A059] transition">In The News</a>
-</div>
-
-            <div class="flex items-center gap-4">
-                <a href="tel:9969590101" class="hidden sm:block border border-white/20 px-4 py-2 rounded text-[10px] font-bold tracking-widest hover:border-white transition">+91 9969590101</a>
-                <button onclick="manualScroll('contact')" class="bg-[#C5A059] text-[#0F172A] px-6 py-2.5 rounded text-[8px] font-black uppercase tracking-widest hover:bg-white transition shadow-lg">Free Consultation</button>
+    <nav class="bg-[#0F172A] text-white sticky top-0 z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex flex-col">
+                <span class="text-xl font-black uppercase tracking-tighter leading-none">Smith & Partners</span>
+                <span class="text-[8px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
+            </div>
+            <div class="hidden lg:flex items-center gap-10 text-[9px] font-black uppercase tracking-[0.3em]">
+                <a href="#" class="hover:text-[#C5A059] transition">Overview</a>
+                <a href="#" class="text-[#C5A059]">The Partners</a>
+                <a href="#" class="hover:text-[#C5A059] transition">Expertise</a>
+                <button class="border border-[#C5A059] text-[#C5A059] px-6 py-3 hover:bg-[#C5A059] hover:text-white transition">Conflict Check</button>
             </div>
         </div>
     </nav>
 
-    <header class="bg-[#0F172A] text-white py-16 md:py-24 border-b border-[#C5A059]/30">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 uppercase italic">Distinguished <span class="gold-accent">Legal Minds</span></h1>
-            <p class="text-slate-400 max-w-2xl mx-auto text-xs md:text-sm italic uppercase tracking-widest">Bridging Local Judicial Excellence with International Standards.</p>
+    <header class="bg-[#0F172A] text-white py-24 relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
+            <i class="fa-solid fa-scale-balanced text-[20rem]"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <span class="text-[#C5A059] font-black tracking-[0.5em] text-[10px] uppercase block mb-4">Leadership & Governance</span>
+            <h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tighter uppercase">
+                The <span class="italic font-light text-slate-400">Partners.</span>
+            </h1>
+            <p class="text-slate-400 max-w-2xl mt-6 text-sm leading-relaxed border-l border-slate-700 pl-6">
+                Our partners are more than legal experts; they are strategic architects who navigate the intersection of law, global finance, and international policy.
+            </p>
         </div>
     </header>
 
-    <section class="py-20 md:py-32 bg-white">
+    <section class="bg-white border-b border-slate-100 py-12">
         <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <span class="block text-3xl font-black text-[#0F172A]">$45M+</span>
+                    <span class="text-[9px] uppercase font-black tracking-widest text-[#C5A059]">Assets Litigated</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-black text-[#0F172A]">85%</span>
+                    <span class="text-[9px] uppercase font-black tracking-widest text-[#C5A059]">Pre-Trial Dismissals</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-black text-[#0F172A]">14</span>
+                    <span class="text-[9px] uppercase font-black tracking-widest text-[#C5A059]">Global Jurisdictions</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-black text-[#0F172A]">24/7</span>
+                    <span class="text-[9px] uppercase font-black tracking-widest text-[#C5A059]">Rapid Response</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 
-                <div class="attorney-card group">
-                    <div class="relative overflow-hidden rounded-lg mb-6 bg-slate-100 aspect-[3/4]">
-                        <img src="https://i.redd.it/lvvzy01grvb61.jpg" alt="Lead Advocate" class="w-full h-full object-cover grayscale">
-                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-4 rounded shadow-xl">
-                            <h3 class="text-lg font-bold uppercase tracking-tight">Adv. Louis Litt</h3>
-                            <p class="text-[10px] gold-accent font-black uppercase tracking-widest mt-1">Founding Partner</p>
+                <div class="partner-card group">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" class="partner-img w-full h-full">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-[9px] font-black text-[#C5A059] uppercase tracking-[0.2em]">Senior Managing Partner</span>
+                                <h3 class="text-2xl font-black text-[#0F172A] mt-1 uppercase tracking-tighter">Sterling Vance</h3>
+                            </div>
+                            <i class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></i>
+                        </div>
+                        <div class="gold-line mb-5"></div>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-6 font-medium">
+                            Former Deputy Prosecutor with 20+ years in international M&A friction and hostile takeover defense.
+                        </p>
+                        <div class="flex gap-4 border-t border-slate-50 pt-4">
+                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-location-dot mr-1"></i> NY / LONDON</span>
+                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-briefcase mr-1"></i> M&A</span>
                         </div>
                     </div>
-                    <p class="text-slate-500 text-sm italic leading-relaxed mb-6">Expert in international corporate law and cross-border commercial litigation at the Kalyan District Court.</p>
-                    <a href="individual-bio-1.html" class="text-[10px] font-black uppercase tracking-widest border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition">View Full Profile</a>
                 </div>
 
-                <div class="attorney-card group">
-                    <div class="relative overflow-hidden rounded-lg mb-6 bg-slate-100 aspect-[3/4]">
-                        <img src="https://images.squarespace-cdn.com/content/v1/640983bab7a54b72ade33626/1682205107260-3YJH3713IWQ0YZBOD0ZD/mikeross-openai.png" alt="Senior Associate" class="w-full h-full object-cover grayscale">
-                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-4 rounded shadow-xl">
-                            <h3 class="text-lg font-bold uppercase tracking-tight">Adv. Mike Ross</h3>
-                            <p class="text-[10px] gold-accent font-black uppercase tracking-widest mt-1">Head of Civil Litigation</p>
+                <div class="partner-card group">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" class="partner-img w-full h-full">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-[9px] font-black text-[#C5A059] uppercase tracking-[0.2em]">Managing Director</span>
+                                <h3 class="text-2xl font-black text-[#0F172A] mt-1 uppercase tracking-tighter">Julianne Thorne</h3>
+                            </div>
+                            <i class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></i>
+                        </div>
+                        <div class="gold-line mb-5"></div>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-6 font-medium">
+                            Specializes in high-stakes regulatory defense for Silicon Valley tech giants and sovereign funds.
+                        </p>
+                        <div class="flex gap-4 border-t border-slate-50 pt-4">
+                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-location-dot mr-1"></i> D.C. / HONG KONG</span>
+                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-briefcase mr-1"></i> GOVT</span>
                         </div>
                     </div>
-                    <p class="text-slate-500 text-sm italic leading-relaxed mb-6">Specializing in real estate law and property disputes within the Mumbai Metropolitan Region.</p>
-                    <a href="individual-bio-2.html" class="text-[10px] font-black uppercase tracking-widest border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition">View Full Profile</a>
                 </div>
 
-                <div class="attorney-card group">
-                    <div class="relative overflow-hidden rounded-lg mb-6 bg-slate-100 aspect-[3/4]">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="IP Counsel" class="w-full h-full object-cover grayscale">
-                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-4 rounded shadow-xl">
-                            <h3 class="text-lg font-bold uppercase tracking-tight">Adv. Sam Jhonson</h3>
-                            <p class="text-[10px] gold-accent font-black uppercase tracking-widest mt-1">Intellectual Property Counsel</p>
+                <div class="partner-card group">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="partner-img w-full h-full">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-[9px] font-black text-[#C5A059] uppercase tracking-[0.2em]">Head of Litigation</span>
+                                <h3 class="text-2xl font-black text-[#0F172A] mt-1 uppercase tracking-tighter">Arthur Litt</h3>
+                            </div>
+                            <i class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></i>
+                        </div>
+                        <div class="gold-line mb-5"></div>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-6 font-medium">
+                            The firm’s lead trial strategist, known for unprecedented success in complex financial forensic cases.
+                        </p>
+                        <div class="flex gap-4 border-t border-slate-50 pt-4">
+                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-location-dot mr-1"></i> LONDON / ZURICH</span>
+                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-briefcase mr-1"></i> FINANCE</span>
                         </div>
                     </div>
-                    <p class="text-slate-500 text-sm italic leading-relaxed mb-6">Protecting digital assets and trademark portfolios for tech-driven startups across India.</p>
-                    <a href="individual-bio-3.html" class="text-[10px] font-black uppercase tracking-widest border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition">View Full Profile</a>
                 </div>
-                
-                <div class="attorney-card group">
-                    <div class="relative overflow-hidden rounded-lg mb-6 bg-slate-100 aspect-[3/4]">
-                        <img src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1hbnxlbnwwfHwwfHx8MA%3D%3D" alt="Senior Associate" class="w-full h-full object-cover grayscale">
-                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-4 rounded shadow-xl">
-                            <h3 class="text-lg font-bold uppercase tracking-tight">Adv. harey spector </h3>
-                            <p class="text-[10px] gold-accent font-black uppercase tracking-widest mt-1">Head of Civil Litigation</p>
-                        </div>
-                        </div>
-                    <p class="text-slate-500 text-sm italic leading-relaxed mb-6">Specializing in real estate law and property disputes within the Mumbai Metropolitan Region.</p>
-                    <a href="individual-bio-2.html" class="text-[10px] font-black uppercase tracking-widest border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition">View Full Profile</a>
-                </div>
-
 
             </div>
         </div>
-        
-        
     </section>
 
-    <footer id="contact" class="bg-[#0F172A] text-white py-20 scroll-mt-24">
-        <div class="max-w-4xl mx-auto px-6">
-            <div id="inquiry-container" class="bg-white/5 backdrop-blur-xl rounded border border-white/10 p-10 md:p-16">
-                <div id="inquiry-form">
-                    <h3 class="text-3xl font-bold text-center uppercase mb-12 italic tracking-widest">Free Consultation</h3>
-                    <form onsubmit="handleInquiry(event)" class="grid grid-cols-1 gap-6">
-                        <input type="text" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white outline-none focus:border-[#C5A059] text-sm">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <input type="tel" placeholder="Mobile Number" required class="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white outline-none focus:border-[#C5A059] text-sm">
-                            <select class="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white outline-none appearance-none text-sm">
-                                <option class="text-slate-900">Corporate Advisory</option>
-                                <option class="text-slate-900">Civil Litigation</option>
-                            </select>
+    <section class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl font-black uppercase tracking-tighter mb-8 leading-tight">
+                        A Culture of <br><span class="text-[#C5A059] italic font-light">Calculated Precision.</span>
+                    </h2>
+                    <p class="text-slate-400 mb-8 leading-relaxed">
+                        At Smith & Partners, we do not merely practice law—we engineer outcomes. Our partners personally lead every engagement, ensuring that the firm's collective intelligence is applied to every tactical decision.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="h-10 w-10 shrink-0 border border-[#C5A059] flex items-center justify-center text-[#C5A059]">01</div>
+                            <p class="text-xs text-slate-300"><strong class="text-white uppercase block mb-1">Conflict Immunity</strong> We maintain a limited client roster to ensure zero conflicts of interest in major international disputes.</p>
                         </div>
-                        <button type="submit" class="w-full bg-[#C5A059] text-[#0F172A] font-black py-5 rounded uppercase tracking-widest text-xs shadow-lg active:scale-95 transition">Submit Request</button>
-                    </form>
+                        <div class="flex gap-4">
+                            <div class="h-10 w-10 shrink-0 border border-[#C5A059] flex items-center justify-center text-[#C5A059]">02</div>
+                            <p class="text-xs text-slate-300"><strong class="text-white uppercase block mb-1">Global Intelligence</strong> Our partners are supported by a proprietary network of forensic analysts and regional policy experts.</p>
+                        </div>
+                    </div>
                 </div>
-                <div id="thank-you-page" class="text-center py-10 transition-all duration-500">
-                    <div class="w-16 h-16 bg-[#C5A059] text-[#0F172A] rounded-full flex items-center justify-center text-3xl mx-auto mb-6"><i class="fas fa-check"></i></div>
-                    <h3 class="text-2xl font-bold gold-accent uppercase italic">Request Filed</h3>
-                    <p class="text-slate-400 mt-4 text-sm">We will respond within 24 business hours.</p>
+                <div class="bg-slate-800 p-12 relative">
+                    <div class="absolute top-0 right-0 p-4">
+                        <i class="fa-solid fa-quote-right text-4xl text-[#C5A059] opacity-30"></i>
+                    </div>
+                    <h3 class="text-2xl font-black italic mb-6">"Our goal is not to win the argument, but to win the war before the first hearing begins."</h3>
+                    <div class="flex items-center gap-4">
+                        <div class="h-px w-12 bg-[#C5A059]"></div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-[#C5A059]">The Partnership Mandate</span>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0F172A] text-white py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black italic uppercase mb-8">Smith & Partners</h2>
+            <div class="flex flex-wrap justify-center gap-10 text-[9px] font-black uppercase tracking-[0.3em] text-slate-500 mb-12">
+                <a href="#" class="hover:text-[#C5A059]">Disclosures</a>
+                <a href="#" class="hover:text-[#C5A059]">Privacy Vault</a>
+                <a href="#" class="hover:text-[#C5A059]">Press Inquiries</a>
+                <a href="#" class="hover:text-[#C5A059]">Careers</a>
+            </div>
+            <p class="text-slate-600 text-[8px] font-bold uppercase tracking-[0.5em]">
+                &copy; 2026 Smith & Partners Global. All Rights Reserved.
+            </p>
         </div>
     </footer>
 
-    <script>
-        function manualScroll(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                const navHeight = 80;
-                const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-            }
-        }
-        function handleInquiry(e) {
-            e.preventDefault();
-            document.getElementById('inquiry-form').style.display = 'none';
-            document.getElementById('thank-you-page').style.display = 'block';
-            manualScroll('contact');
-        }
-    </script>
 </body>
 </html>
