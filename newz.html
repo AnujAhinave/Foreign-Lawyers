@@ -3,116 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advocate  Jhonson Smith  | International Legal Counsel</title>
+    <title>Global Insights | Smith & Partners | International News</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
+        :root { --navy: #0F172A; --gold: #C5A059; }
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .gold-accent { color: #C5A059; }
-        .bg-navy { background-color: #0F172A; }
-        .legal-card { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
-        .legal-card:hover { border-top: 4px solid #C5A059; transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
+        
+        .news-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: white;
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            border-top: 4px solid var(--gold);
+            box-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.15);
+        }
+
+        .hero-news {
+            background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-slate-50 text-slate-800 antialiased">
 
-    <nav class="sticky top-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-white/10 text-white">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col hover:opacity-90 transition">
-                <span class="text-xl font-black tracking-tight uppercase leading-none">Adv.  Jhonson Smith </span>
-                <span class="text-[9px] tracking-[0.3em] gold-accent font-bold uppercase mt-1 italic">Legal Excellence & Integrity</span>
-            </a>
+    <div class="bg-[#0F172A] text-white py-2.5 text-[9px] font-black uppercase tracking-[0.2em] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <span><i class="fa-solid fa-newspaper mr-2 text-[#C5A059]"></i> Global Media Relations</span>
+            <span class="hidden md:block italic">London • New York • Hong Kong</span>
+        </div>
+    </div>
 
-            <div class="hidden lg:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest opacity-80">
-    <a href="index.html" class="hover:text-[#C5A059] transition">Home</a>
-    <a href="adv.html" class="hover:text-[#C5A059] transition">Meet Our Attorneys</a>
-    <a href="expertise.html" class="hover:text-[#C5A059] transition">Practice Areas</a>
-    <a href="newz.html" class="hover:text-[#C5A059] transition">In The News</a>
-</div>
-
-            <div class="flex items-center gap-4">
-                <a href="adv.html#contact-form" class="bg-[#C5A059] text-[#0F172A] px-6 py-2.5 rounded text-[8px] font-black uppercase tracking-widest hover:bg-white transition shadow-lg">
-                    Book Consultation
-                </a>
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <div class="flex flex-col text-left">
+                <span class="text-2xl font-black uppercase tracking-tighter text-[#0F172A] leading-none">Smith & Partners</span>
+                <span class="text-[9px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
             </div>
+            <div class="hidden lg:flex items-center gap-10 text-[11px] font-extrabold uppercase tracking-widest text-[#0F172A]">
+                <a href="index.html" class="hover:text-[#C5A059] transition">Overview</a>
+                <a href="adv.html" class="hover:text-[#C5A059] transition">Our Partners</a>
+                <a href="expertise.html" class="hover:text-[#C5A059] transition">Expertise</a>
+                <a href="newz.html" class="text-[#C5A059] border-b-2 border-[#C5A059] pb-1">Global Insights</a>
+            </div>
+            <a href="adv.html#contact-form" class="bg-[#0F172A] text-white px-7 py-3.5 text-[10px] font-black uppercase tracking-widest hover:bg-[#C5A059] transition shadow-lg">
+                Conflict Check
+            </a>
         </div>
     </nav>
 
-    <header class="bg-[#0F172A] text-white py-28 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/[0.03] to-transparent"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <span class="gold-accent text-[11px] font-bold uppercase tracking-[0.5em] mb-6 block italic">Public Record & Global Media</span>
-            <h1 class="text-6xl md:text-8xl font-bold leading-tight mb-8">Judicial <br><span class="gold-accent italic">Headlines.</span></h1>
-            <p class="max-w-2xl text-slate-400 text-lg font-light leading-relaxed">Documenting high-stakes litigation, landmark recoveries, and the evolving landscape of Indian corporate law.</p>
+    <header class="hero-news py-32 md:py-48 text-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <span class="text-[#C5A059] font-bold uppercase tracking-[0.5em] text-[10px] block mb-6">Public Record & Global Intelligence</span>
+            <h1 class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-8 uppercase">
+                Judicial <br><span class="italic font-light text-slate-400">Headlines.</span>
+            </h1>
+            <p class="max-w-2xl text-slate-400 text-lg font-medium leading-relaxed italic border-l-2 border-[#C5A059] pl-8">
+                Analyzing high-stakes litigation, multi-jurisdictional recoveries, and the evolving regulatory landscape of international finance.
+            </p>
         </div>
     </header>
 
-    <main class="py-24 bg-white">
+    <main class="py-24 lg:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center gap-6 mb-16">
-                <h3 class="text-2xl font-bold uppercase tracking-widest italic">Featured <span class="gold-accent">Coverage</span></h3>
+            <div class="flex items-center gap-6 mb-20">
+                <h3 class="text-xs font-black uppercase tracking-[0.4em] text-[#0F172A]">Featured <span class="text-[#C5A059]">Intelligence</span></h3>
                 <div class="flex-1 h-[1px] bg-slate-100"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 
                 <article class="news-card p-12 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-10">
-                            <span class="bg-[#0F172A] text-[#C5A059] text-[9px] font-black px-4 py-1.5 uppercase tracking-widest">Financial Express</span>
-                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Oct 2025</span>
+                        <div class="flex items-center justify-between mb-12">
+                            <span class="bg-[#0F172A] text-[#C5A059] text-[9px] font-black px-5 py-2 uppercase tracking-widest">Global Finance Review</span>
+                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">March 2026</span>
                         </div>
-                        <h2 class="text-3xl font-bold mb-6 leading-tight">Major Recovery: ₹25 Crores Secured for Industrial Units</h2>
-                        <p class="text-slate-600 text-base leading-relaxed mb-10 italic border-l-2 border-[#C5A059] pl-6">
-                            In a landmark move for MSMEs in the Kalyan-Bhiwandi belt, Adv. Jhonson Smith  successfully navigated complex recovery suits under the MSMED Act, liquidating long-standing corporate debts.
+                        <h2 class="text-4xl font-black text-[#0F172A] mb-8 uppercase leading-none tracking-tighter">Strategic Recovery: $450M Secured in Sovereign Dispute</h2>
+                        <p class="text-slate-500 text-base leading-relaxed mb-12 italic font-medium">
+                            Following a three-year multi-jurisdictional battle, Smith & Partners secured a landmark settlement for institutional bondholders against a sovereign entity in the Southern District of New York.
                         </p>
                     </div>
-                    <a href="#" class="media-link gold-accent group">Read Full Article <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                    <a href="#" class="text-[11px] font-black uppercase tracking-widest text-[#C5A059] hover:text-[#0F172A] transition inline-flex items-center group">
+                        Read Case Analysis <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
                 </article>
 
                 <article class="news-card p-12 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-10">
-                            <span class="bg-[#C5A059] text-[#0F172A] text-[9px] font-black px-4 py-1.5 uppercase tracking-widest">Legal Times</span>
-                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Jan 2026</span>
+                        <div class="flex items-center justify-between mb-12">
+                            <span class="bg-[#C5A059] text-[#0F172A] text-[9px] font-black px-5 py-2 uppercase tracking-widest">The Wall Street Ledger</span>
+                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">Feb 2026</span>
                         </div>
-                        <h2 class="text-3xl font-bold mb-6 leading-tight">MahaRERA Tribunal Orders Possession + Interest</h2>
-                        <p class="text-slate-600 text-base leading-relaxed mb-10 italic border-l-2 border-[#0F172A] pl-6">
-                            Representing a group of homeowners against developer negligence, the chambers secured a favorable possession mandate along with a 10.5% interest penalty on delays.
+                        <h2 class="text-4xl font-black text-[#0F172A] mb-8 uppercase leading-none tracking-tighter">SEC Compliance: Redefining Digital Asset Security</h2>
+                        <p class="text-slate-500 text-base leading-relaxed mb-12 italic font-medium">
+                            Smith & Partners led the advisory for the largest cross-border tokenized asset launch, establishing a new global precedent for regulatory transparency and investor protection.
                         </p>
                     </div>
-                    <a href="#" class="media-link gold-accent group">Read Case Summary <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                    <a href="#" class="text-[11px] font-black uppercase tracking-widest text-[#C5A059] hover:text-[#0F172A] transition inline-flex items-center group">
+                        View Briefing <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
                 </article>
 
                 <article class="news-card p-12 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-10">
-                            <span class="bg-[#0F172A] text-[#C5A059] text-[9px] font-black px-4 py-1.5 uppercase tracking-widest">Tech Law Journal</span>
-                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Dec 2025</span>
+                        <div class="flex items-center justify-between mb-12">
+                            <span class="bg-[#0F172A] text-[#C5A059] text-[9px] font-black px-5 py-2 uppercase tracking-widest">London Legal Daily</span>
+                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">Dec 2025</span>
                         </div>
-                        <h2 class="text-3xl font-bold mb-6 leading-tight">Securing Global IP for Emerging SaaS Platforms</h2>
-                        <p class="text-slate-600 text-base leading-relaxed mb-10 italic border-l-2 border-[#C5A059] pl-6">
-                            Adv. Ahinave's strategic drafting of Master Service Agreements (MSAs) has set a new standard for protecting intellectual property in cross-border tech transactions.
+                        <h2 class="text-4xl font-black text-[#0F172A] mb-8 uppercase leading-none tracking-tighter">Acquittal in High-Profile White Collar Defense</h2>
+                        <p class="text-slate-500 text-base leading-relaxed mb-12 italic font-medium">
+                            The firm's European division successfully defended a global tech executive in a complex insider trading probe, resulting in a full dismissal of all charges in the High Court.
                         </p>
                     </div>
-                    <a href="#" class="media-link gold-accent group">View Insight <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                    <a href="#" class="text-[11px] font-black uppercase tracking-widest text-[#C5A059] hover:text-[#0F172A] transition inline-flex items-center group">
+                        Full Disclosure <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
                 </article>
 
                 <article class="news-card p-12 flex flex-col justify-between">
                     <div>
-                        <div class="flex items-center justify-between mb-10">
-                            <span class="bg-slate-500 text-white text-[9px] font-black px-4 py-1.5 uppercase tracking-widest">District Press</span>
-                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">Sept 2025</span>
+                        <div class="flex items-center justify-between mb-12">
+                            <span class="bg-slate-500 text-white text-[9px] font-black px-5 py-2 uppercase tracking-widest">Global IP Monitor</span>
+                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.2em]">Jan 2026</span>
                         </div>
-                        <h2 class="text-3xl font-bold mb-6 leading-tight">Strategic Defense Leads to High-Stakes Acquittal</h2>
-                        <p class="text-slate-600 text-base leading-relaxed mb-10 italic border-l-2 border-slate-400 pl-6">
-                            A complex criminal proceeding involving corporate misconduct ended in a favorable verdict after 14 months of rigorous judicial advocacy by the Kalyan-based defense team.
+                        <h2 class="text-4xl font-black text-[#0F172A] mb-8 uppercase leading-none tracking-tighter">Patent Protection for GenAI SaaS Frameworks</h2>
+                        <p class="text-slate-500 text-base leading-relaxed mb-12 italic font-medium">
+                            Drafting the international framework for generative AI licensing, our IP team secured exclusive patents for a Silicon Valley unicorn across 14 jurisdictions.
                         </p>
                     </div>
-                    <a href="#" class="media-link gold-accent group">Read Press Release <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i></a>
+                    <a href="#" class="text-[11px] font-black uppercase tracking-widest text-[#C5A059] hover:text-[#0F172A] transition inline-flex items-center group">
+                        Read Whitepaper <i class="fas fa-arrow-right ml-3 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
                 </article>
 
             </div>
@@ -121,7 +150,59 @@
 
     <section class="py-24 bg-slate-50 border-y border-slate-200">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-20">
                 <div class="lg:col-span-1">
-                    <h3 class="text-4xl font-bold mb-6 italic">Media <span class="gold-accent">Resources</span></h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8">Download verified professional assets for editorial use, including head
+                    <h3 class="text-4xl font-black text-[#0F172A] mb-8 uppercase tracking-tighter italic">Media <span class="text-[#C5A059]">Resources</span></h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-10 font-medium">Download verified professional assets for editorial use, including firm biographies and official photography.</p>
+                    <a href="#" class="inline-block bg-[#0F172A] text-white px-8 py-4 text-[10px] font-black uppercase tracking-widest hover:bg-[#C5A059] transition shadow-xl">
+                        Press Kit (ZIP)
+                    </a>
+                </div>
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-10">
+                    <div class="p-8 bg-white border border-slate-200">
+                        <i class="fa-solid fa-microphone-lines text-2xl text-[#C5A059] mb-6"></i>
+                        <h4 class="font-black uppercase tracking-widest text-[12px] mb-4">Media Inquiries</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed uppercase tracking-widest font-bold">press@smithpartners.global</p>
+                    </div>
+                    <div class="p-8 bg-white border border-slate-200">
+                        <i class="fa-solid fa-file-invoice-dollar text-2xl text-[#C5A059] mb-6"></i>
+                        <h4 class="font-black uppercase tracking-widest text-[12px] mb-4">Corporate Filings</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed uppercase tracking-widest font-bold">compliance@smithpartners.global</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0F172A] text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-24 border-b border-white/10 pb-20 mb-12">
+            <div>
+                <span class="text-2xl font-black uppercase tracking-tighter">Smith & Partners</span>
+                <p class="mt-8 text-[13px] text-slate-300 leading-relaxed font-medium italic">
+                    "Setting the global standard for elite advocacy and strategic corporate defense."
+                </p>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5A059] mb-10">Compliance</h4>
+                <p class="text-xs text-slate-400 leading-relaxed font-bold uppercase tracking-widest">
+                    This site constitutes Attorney Advertising. Prior results do not guarantee a similar outcome.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-[#C5A059] mb-10">Global Intake</h4>
+                <p class="text-3xl font-black tracking-tighter text-white">(212) 555-0198</p>
+                <p class="text-[9px] text-[#C5A059] mt-4 font-black uppercase tracking-[0.3em]">Institutional Verification Required</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-[9px] text-slate-500 font-black uppercase tracking-[0.2em]">
+            <span>&copy; 2026 Smith & Partners LLP.</span>
+            <div class="flex gap-8 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition">Privacy</a>
+                <a href="#" class="hover:text-white transition">Legal</a>
+                <a href="#" class="hover:text-white transition">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
