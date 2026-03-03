@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Legal Team | Adv. [Name] & Associates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .gold-accent { color: #C5A059; }
+        .bg-navy { background-color: #0F172A; }
+        .scroll-mt-24 { scroll-margin-top: 6rem; }
+        #thank-you-page { display: none; }
+        
+        /* Profile Card Hover Effect */
+        .attorney-card:hover img { transform: scale(1.05); filter: grayscale(0); }
+        .attorney-card img { transition: all 0.7s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+    <nav class="sticky top-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-white/10 text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+            <div class="flex flex-col text-left">
+                <span class="text-lg md:text-xl font-black tracking-tight uppercase leading-none">Adv. [Name]</span>
+                <span class="text-[8px] md:text-[9px] tracking-[0.2em] gold-accent font-bold uppercase mt-1 italic uppercase">Expert Legal Counsel</span>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest opacity-80">
+                <a href="index.html" class="hover:gold-accent transition">Home</a>
+                <a href="about.html" class="text-[#C5A059] transition border-b border-[#C5A059]">Our Team</a>
+                <a href="practice.html" class="hover:gold-accent transition">Practice Areas</a>
+                <a href="reviews.html" class="hover:gold-accent transition">Reviews</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:9969590101" class="hidden sm:block border border-white/20 px-4 py-2 rounded text-[10px] font-bold tracking-widest hover:border-white transition">+91 9969590101</a>
+                <button onclick="manualScroll('contact')" class="bg-[#C5A059] text-[#0F172A] px-6 py-2.5 rounded text-[8px] font-black uppercase tracking-widest hover:bg-white transition shadow-lg">Free Consultation</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-[#0F172A] text-white py-16 md:py-24 border-b border-[#C5A059]/30">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 uppercase italic">Distinguished <span class="gold-accent">Legal Minds</span></h1>
+            <p class="text-slate-400 max-w-2xl mx-auto text-xs md:text-sm italic uppercase tracking-widest">Bridging Local Judicial Excellence with International Standards.</p>
+        </div>
+    </header>
+
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+                
+                <div class="attorney-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-6 bg-slate-100 aspect-[3/4]">
+                        <img src="https://i.redd.it/lvvzy01grvb61.jpg" alt="Lead Advocate" class="w-full h-full object-cover grayscale">
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-4 rounded shadow-xl">
+                            <h3 class="text-lg font-bold uppercase tracking-tight">Adv. Louis Litt</h3>
+                            <p class="text-[10px] gold-accent font-black uppercase tracking-widest mt-1">Founding Partner</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 text-sm italic leading-relaxed mb-6">Expert in international corporate law and cross-border commercial litigation at the Kalyan District Court.</p>
+                    <a href="individual-bio-1.html" class="text-[10px] font-black uppercase tracking-widest border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition">View Full Profile</a>
+                </div>
+
+                <div class="attorney-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-6 bg-slate-100 aspect-[3/4]">
+                        <img src="https://images.squarespace-cdn.com/content/v1/640983bab7a54b72ade33626/1682205107260-3YJH3713IWQ0YZBOD0ZD/mikeross-openai.png" alt="Senior Associate" class="w-full h-full object-cover grayscale">
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-4 rounded shadow-xl">
+                            <h3 class="text-lg font-bold uppercase tracking-tight">Adv. Mike Ross</h3>
+                            <p class="text-[10px] gold-accent font-black uppercase tracking-widest mt-1">Head of Civil Litigation</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 text-sm italic leading-relaxed mb-6">Specializing in real estate law and property disputes within the Mumbai Metropolitan Region.</p>
+                    <a href="individual-bio-2.html" class="text-[10px] font-black uppercase tracking-widest border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition">View Full Profile</a>
+                </div>
+
+                <div class="attorney-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-6 bg-slate-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="IP Counsel" class="w-full h-full object-cover grayscale">
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-4 rounded shadow-xl">
+                            <h3 class="text-lg font-bold uppercase tracking-tight">Adv. Sam Jhonson</h3>
+                            <p class="text-[10px] gold-accent font-black uppercase tracking-widest mt-1">Intellectual Property Counsel</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 text-sm italic leading-relaxed mb-6">Protecting digital assets and trademark portfolios for tech-driven startups across India.</p>
+                    <a href="individual-bio-3.html" class="text-[10px] font-black uppercase tracking-widest border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition">View Full Profile</a>
+                </div>
+                
+                <div class="attorney-card group">
+                    <div class="relative overflow-hidden rounded-lg mb-6 bg-slate-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1hbnxlbnwwfHwwfHx8MA%3D%3D" alt="Senior Associate" class="w-full h-full object-cover grayscale">
+                        <div class="absolute bottom-4 left-4 right-4 bg-white/95 p-4 rounded shadow-xl">
+                            <h3 class="text-lg font-bold uppercase tracking-tight">Adv. harey spector </h3>
+                            <p class="text-[10px] gold-accent font-black uppercase tracking-widest mt-1">Head of Civil Litigation</p>
+                        </div>
+                        </div>
+                    <p class="text-slate-500 text-sm italic leading-relaxed mb-6">Specializing in real estate law and property disputes within the Mumbai Metropolitan Region.</p>
+                    <a href="individual-bio-2.html" class="text-[10px] font-black uppercase tracking-widest border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition">View Full Profile</a>
+                </div>
+
+
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <footer id="contact" class="bg-[#0F172A] text-white py-20 scroll-mt-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div id="inquiry-container" class="bg-white/5 backdrop-blur-xl rounded border border-white/10 p-10 md:p-16">
+                <div id="inquiry-form">
+                    <h3 class="text-3xl font-bold text-center uppercase mb-12 italic tracking-widest">Free Consultation</h3>
+                    <form onsubmit="handleInquiry(event)" class="grid grid-cols-1 gap-6">
+                        <input type="text" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white outline-none focus:border-[#C5A059] text-sm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="tel" placeholder="Mobile Number" required class="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white outline-none focus:border-[#C5A059] text-sm">
+                            <select class="w-full bg-white/5 border border-white/10 rounded px-6 py-4 text-white outline-none appearance-none text-sm">
+                                <option class="text-slate-900">Corporate Advisory</option>
+                                <option class="text-slate-900">Civil Litigation</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-[#C5A059] text-[#0F172A] font-black py-5 rounded uppercase tracking-widest text-xs shadow-lg active:scale-95 transition">Submit Request</button>
+                    </form>
+                </div>
+                <div id="thank-you-page" class="text-center py-10 transition-all duration-500">
+                    <div class="w-16 h-16 bg-[#C5A059] text-[#0F172A] rounded-full flex items-center justify-center text-3xl mx-auto mb-6"><i class="fas fa-check"></i></div>
+                    <h3 class="text-2xl font-bold gold-accent uppercase italic">Request Filed</h3>
+                    <p class="text-slate-400 mt-4 text-sm">We will respond within 24 business hours.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function manualScroll(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const navHeight = 80;
+                const targetPosition = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+        }
+        function handleInquiry(e) {
+            e.preventDefault();
+            document.getElementById('inquiry-form').style.display = 'none';
+            document.getElementById('thank-you-page').style.display = 'block';
+            manualScroll('contact');
+        }
+    </script>
+</body>
+</html>
