@@ -3,36 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Law Firm Template | High-Density SEO Version</title>
-    
+    <title>Practice Disciplines | Smith & Partners | NYC Commercial Litigation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <style>
         :root { --navy: #0F172A; --gold: #C5A059; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         
-        /* The "NYC" Legal Card Style */
-        .practice-area-card {
-            padding: 3rem;
-            background: white;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
         }
-        .practice-area-card:hover {
-            border-top: 4px solid var(--gold);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+
+        .practice-card {
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .practice-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-slate-50 text-slate-800 antialiased">
 
-    <div class="bg-[#0F172A] text-white py-2 text-[10px] font-bold uppercase tracking-widest border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between">
-            <span>Attorney Advertising</span>
-            <span>Available 24/7: (555) 123-4567</span>
+    <div class="bg-[#0F172A] text-white py-2.5 text-[9px] font-black uppercase tracking-[0.2em] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <span><i class="fa-solid fa-gavel mr-2 text-gold"></i> Attorney Advertising</span>
+            <span class="hidden md:block italic">Prior results do not guarantee a similar outcome</span>
         </div>
     </div>
 
@@ -40,102 +45,122 @@
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
             <div class="flex flex-col">
                 <span class="text-2xl font-black uppercase tracking-tighter text-navy leading-none">Smith & Partners</span>
-                <span class="text-[9px] tracking-[0.3em] text-gold font-bold uppercase mt-1">Attorneys at Law</span>
+                <span class="text-[9px] tracking-[0.4em] text-gold font-bold uppercase mt-1">Global Counselors</span>
             </div>
-            <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-wider">
+            <div class="hidden lg:flex items-center gap-10 text-[11px] font-extrabold uppercase tracking-widest text-navy">
+                <a href="index.html" class="hover:text-gold transition">Overview</a>
+                <a href="#" class="text-gold border-b-2 border-gold pb-1">Expertise</a>
                 <a href="#" class="hover:text-gold transition">The Firm</a>
-                <a href="#" class="hover:text-gold transition">Attorneys</a>
-                <a href="#" class="hover:text-gold transition">Practice Areas</a>
-                <a href="#" class="hover:text-gold transition">Results</a>
-                <a href="#" class="bg-navy text-white px-6 py-3 hover:bg-gold transition">Consultation</a>
+                <a href="#" class="bg-navy text-white px-7 py-3.5 hover:bg-gold transition shadow-lg">Conflict Check</a>
             </div>
         </div>
     </nav>
 
+    <header class="hero-gradient py-32 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <span class="text-gold font-bold uppercase tracking-[0.3em] text-[10px]">Strategic Disciplines</span>
+            <h1 class="text-6xl md:text-7xl font-black mt-4 max-w-4xl leading-[0.9] tracking-tighter">
+                Precision in <span class="italic font-light text-slate-400">Complex</span> Matters.
+            </h1>
+        </div>
+    </header>
+
     <section class="py-24">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="mb-16 border-b pb-8">
-                <h2 class="text-5xl font-black text-navy mb-4 italic">Core Practice Areas</h2>
-                <p class="text-slate-500 max-w-2xl">Our firm provides comprehensive legal solutions across a wide spectrum of litigation and transactional matters. We combine big-firm resources with boutique-firm attention.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-8">
-                <div class="practice-area-card">
-                    <div class="text-gold text-3xl mb-6"><i class="fa-solid fa-scale-balanced"></i></div>
-                    <h3 class="text-2xl font-bold mb-4">Complex Civil Litigation</h3>
-                    <p class="text-sm text-slate-600 mb-6">
-                        In the high-stakes world of New York civil litigation, experience is the only currency that matters. Our trial attorneys represent clients in state and federal courts across a broad range of disputes, including breach of contract, shareholder derivative suits, and commercial torts. We understand that litigation is a business decision, which is why we focus on aggressive discovery and strategic positioning to force early settlements or win at trial.
-                    </p>
-                    <ul class="grid grid-cols-2 gap-3 text-[10px] font-bold uppercase text-slate-500">
-                        <li><i class="fa-solid fa-chevron-right text-gold mr-2"></i> Commercial Disputes</li>
-                        <li><i class="fa-solid fa-chevron-right text-gold mr-2"></i> Class Action Defense</li>
-                        <li><i class="fa-solid fa-chevron-right text-gold mr-2"></i> Intellectual Property</li>
-                        <li><i class="fa-solid fa-chevron-right text-gold mr-2"></i> Employment Law</li>
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-10 practice-card flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold text-2xl mb-8"><i class="fa-solid fa-landmark"></i></div>
+                        <h3 class="text-2xl font-bold text-navy mb-5 uppercase tracking-tight">Appellate Litigation</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-8">
+                            Specialized advocacy for state and federal appeals. We distill complex trial records into persuasive legal briefs that resonate with appellate benches. Our approach is rooted in rigorous research and judicial precedent.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 text-[10px] font-black uppercase tracking-widest text-slate-400 border-t pt-8">
+                        <li><i class="fa-solid fa-circle-check text-gold mr-3"></i> Writ of Certiorari</li>
+                        <li><i class="fa-solid fa-circle-check text-gold mr-3"></i> Amicus Briefs</li>
                     </ul>
                 </div>
 
-                <div class="practice-area-card">
-                    <div class="text-gold text-3xl mb-6"><i class="fa-solid fa-building-columns"></i></div>
-                    <h3 class="text-2xl font-bold mb-4">Corporate & Securities</h3>
-                    <p class="text-sm text-slate-600 mb-6">
-                        From seed-stage startups to established mid-market enterprises, our corporate team provides the bedrock for sustainable growth. We handle the full lifecycle of a business, including entity formation, capital raises, and complex M&A transactions. Our attorneys act as outside general counsel, navigating the regulatory hurdles of the SEC and local compliance frameworks, ensuring your business remains protected in an ever-shifting global market.
-                    </p>
-                    <ul class="grid grid-cols-2 gap-3 text-[10px] font-bold uppercase text-slate-500">
-                        <li><i class="fa-solid fa-chevron-right text-gold mr-2"></i> Mergers & Acquisitions</li>
-                        <li><i class="fa-solid fa-chevron-right text-gold mr-2"></i> Venture Capital</li>
-                        <li><i class="fa-solid fa-chevron-right text-gold mr-2"></i> Private Equity</li>
-                        <li><i class="fa-solid fa-chevron-right text-gold mr-2"></i> Corporate Finance</li>
+                <div class="bg-white p-10 practice-card flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold text-2xl mb-8"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="text-2xl font-bold text-navy mb-5 uppercase tracking-tight text-gold">White Collar Defense</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-8">
+                            Protecting corporate executives and entities during DOJ, SEC, and FINRA investigations. We provide discreet, aggressive defense strategies for allegations of securities fraud, RICO, and insider trading.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 text-[10px] font-black uppercase tracking-widest text-slate-400 border-t pt-8">
+                        <li><i class="fa-solid fa-circle-check text-gold mr-3"></i> Regulatory Audits</li>
+                        <li><i class="fa-solid fa-circle-check text-gold mr-3"></i> Internal Investigations</li>
                     </ul>
                 </div>
+
+                <div class="bg-white p-10 practice-card flex flex-col justify-between">
+                    <div>
+                        <div class="text-gold text-2xl mb-8"><i class="fa-solid fa-handshake-simple"></i></div>
+                        <h3 class="text-2xl font-bold text-navy mb-5 uppercase tracking-tight">Crisis Management</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-8">
+                            In the court of public opinion, legal expertise isn't enough. We synchronize legal defense with reputation management for high-profile matters involving intense media scrutiny and multi-district litigation.
+                        </p>
+                    </div>
+                    <ul class="space-y-3 text-[10px] font-black uppercase tracking-widest text-slate-400 border-t pt-8">
+                        <li><i class="fa-solid fa-circle-check text-gold mr-3"></i> Strategic Communications</li>
+                        <li><i class="fa-solid fa-circle-check text-gold mr-3"></i> Mitigation Counsel</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section class="bg-white py-12 border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center opacity-50 grayscale">
-            <span class="font-bold text-xl uppercase tracking-tighter">SuperLawyers</span>
-            <span class="font-bold text-xl uppercase tracking-tighter">BestLawyers</span>
-            <span class="font-bold text-xl uppercase tracking-tighter">Martindale-Hubbell</span>
-            <span class="font-bold text-xl uppercase tracking-tighter">ABA Member</span>
+    <section class="bg-white py-16 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 block mb-10">Accreditations & Memberships</span>
+            <div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition duration-500">
+                <span class="font-black text-xl uppercase tracking-tighter italic">SuperLawyers</span>
+                <span class="font-black text-xl uppercase tracking-tighter italic">Martindale-Hubbell</span>
+                <span class="font-black text-xl uppercase tracking-tighter italic">AV-Preeminent</span>
+                <span class="font-black text-xl uppercase tracking-tighter italic">Federal Bar</span>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-navy text-white pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 border-b border-white/10 pb-16 mb-10">
+    <footer class="bg-[#0F172A] text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-24 border-b border-white/10 pb-20 mb-12">
             <div class="col-span-1">
-                <span class="text-xl font-bold uppercase tracking-tight">Smith & Partners</span>
-                <p class="mt-6 text-xs text-slate-400 leading-relaxed">Dedicated to providing elite legal representation. Our track record of success speaks for itself.</p>
+                <span class="text-2xl font-black uppercase tracking-tighter text-white">Smith & Partners</span>
+                <p class="mt-8 text-[13px] text-slate-300 leading-relaxed font-medium">
+                    A multi-jurisdictional law firm dedicated to resolving the most challenging legal obstacles for institutional clients and private individuals. 
+                </p>
             </div>
             <div>
-                <h4 class="text-xs font-bold uppercase tracking-widest text-gold mb-6">Practice Areas</h4>
-                <ul class="text-xs text-slate-400 space-y-4">
-                    <li><a href="#" class="hover:text-white transition">Personal Injury</a></li>
-                    <li><a href="#" class="hover:text-white transition">Commercial Litigation</a></li>
-                    <li><a href="#" class="hover:text-white transition">Real Estate Law</a></li>
-                    <li><a href="#" class="hover:text-white transition">Criminal Defense</a></li>
-                </ul>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-gold mb-10">Offices</h4>
+                <div class="space-y-8">
+                    <div>
+                        <span class="block font-bold text-xs uppercase tracking-widest text-white mb-2">Manhattan</span>
+                        <p class="text-xs text-slate-300">750 Third Avenue, 9th Floor<br>New York, NY 10017</p>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-xs uppercase tracking-widest text-white mb-2">Washington D.C.</span>
+                        <p class="text-xs text-slate-300">1200 Pennsylvania Ave NW<br>Washington, DC 20460</p>
+                    </div>
+                </div>
             </div>
             <div>
-                <h4 class="text-xs font-bold uppercase tracking-widest text-gold mb-6">Firm Profile</h4>
-                <ul class="text-xs text-slate-400 space-y-4">
-                    <li><a href="#" class="hover:text-white transition">About the Firm</a></li>
-                    <li><a href="#" class="hover:text-white transition">Meet the Attorneys</a></li>
-                    <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                    <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xs font-bold uppercase tracking-widest text-gold mb-6">Contact</h4>
-                <p class="text-xs text-slate-400">123 Legal Plaza, Suite 400</p>
-                <p class="text-xs text-slate-400 mt-2">New York, NY 10001</p>
-                <p class="text-xs text-gold mt-4 font-bold">(555) 123-4567</p>
+                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-gold mb-10">Direct Counsel</h4>
+                <p class="text-3xl font-black tracking-tighter text-white">(212) 555-0198</p>
+                <p class="text-xs text-slate-300 mt-4 font-bold uppercase tracking-widest">Confidential Intake Line</p>
+                <a href="#" class="inline-block mt-8 text-[10px] font-black text-gold uppercase tracking-widest border-b border-gold/30 pb-1 hover:border-gold hover:text-white transition-colors">Download Firm Profile (PDF)</a>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center text-[10px] text-slate-500 font-bold uppercase">
-            <span>&copy; 2026 Smith & Partners. All Rights Reserved.</span>
-            <div class="flex gap-6">
-                <a href="#">Disclaimer</a>
-                <a href="#">Privacy Policy</a>
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-[9px] text-slate-400 font-black uppercase tracking-[0.2em]">
+            <span class="text-slate-400">&copy; 2026 Smith & Partners. Professional Attorney Advertising.</span>
+            <div class="flex gap-8 mt-4 md:mt-0">
+                <a href="#" class="text-slate-400 hover:text-gold transition">Terms of Service</a>
+                <a href="#" class="text-slate-400 hover:text-gold transition">Privacy & HIPAA</a>
+                <a href="#" class="text-slate-400 hover:text-gold transition">Sitemap</a>
             </div>
         </div>
     </footer>
