@@ -6,7 +6,7 @@
     <title>Practice Expertise | Adv. Anuj Ahinave</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
@@ -17,18 +17,11 @@
         .gold-accent { color: #C5A059; }
         .bg-navy { background-color: #0F172A; }
         
-        /* Navigation Uniform Styles */
-        .nav-link { position: relative; transition: color 0.3s ease; }
-        .nav-link::after { 
-            content: ''; position: absolute; width: 0; height: 1px; bottom: -4px; left: 0; 
-            background-color: #C5A059; transition: width 0.3s ease; 
-        }
-        .nav-link:hover::after { width: 100%; }
-
-        /* Section Styles */
+        /* Specialized Legal Border */
         .legal-border { border-left: 4px solid #C5A059; padding-left: 1.5rem; transition: border-color 0.3s ease; }
         .legal-border:hover { border-color: #0F172A; }
 
+        /* Stat Card Refinement */
         .stat-card {
             background: #ffffff;
             border: 1px solid #f1f5f9;
@@ -46,31 +39,31 @@
             font-weight: 800; border: 1px solid rgba(197, 160, 89, 0.3);
         }
         #thank-you-page { display: none; }
-        .scroll-mt-24 { scroll-margin-top: 6rem; }
+        .scroll-mt-20 { scroll-margin-top: 5rem; }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="sticky top-0 z-50 bg-[#0F172A]/95 backdrop-blur-md border-b border-white/10 text-white">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex flex-col text-left group">
-                <span class="text-xl font-black tracking-tight uppercase leading-none group-hover:text-[#C5A059] transition">Adv. Anuj Ahinave</span>
+            <a href="index.html" class="flex flex-col hover:opacity-90 transition text-left">
+                <span class="text-xl font-black tracking-tight uppercase leading-none">Adv. Anuj Ahinave</span>
                 <span class="text-[9px] tracking-[0.3em] gold-accent font-bold uppercase mt-1 italic">Legal Excellence & Integrity</span>
             </a>
 
-            <div class="hidden lg:flex items-center gap-10 text-[10px] font-bold uppercase tracking-widest opacity-80">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">Meet Our Attorneys</a>
-                <a href="expertise.html" class="nav-link text-[#C5A059] border-b border-[#C5A059] pb-1 italic">Practice Areas</a>
-                <a href="news.html" class="nav-link">In The News</a>
+            <div class="hidden lg:flex items-center gap-8 text-[10px] font-bold uppercase tracking-widest opacity-80">
+                <a href="index.html" class="hover:gold-accent transition">Home</a>
+                <a href="adv.html" class="hover:gold-accent transition">Meet Our Attorneys</a>
+                <a href="expertise.html" class="text-[#C5A059] italic border-b border-[#C5A059] pb-1">Practice Areas</a>
+                <a href="newz.html" class="hover:gold-accent transition">In The News</a>
             </div>
 
-            <div class="flex items-center gap-6">
-                <a href="tel:9969590101" class="hidden md:block text-[11px] font-bold tracking-widest border-r border-white/10 pr-6">
+            <div class="flex items-center gap-4">
+                <a href="tel:9969590101" class="hidden sm:block border border-white/20 px-4 py-2 rounded text-[10px] font-bold tracking-widest hover:border-white transition">
                     +91 9969590101
                 </a>
                 <button onclick="manualScroll('contact')" class="bg-[#C5A059] text-[#0F172A] px-6 py-2.5 rounded text-[8px] font-black uppercase tracking-widest hover:bg-white transition shadow-lg">
-                    Free Consultation
+                    Get Free Consultation
                 </button>
             </div>
         </div>
@@ -105,9 +98,26 @@
         </div>
     </section>
 
-    <section id="practice" class="py-24 bg-white scroll-mt-24 border-b border-slate-100">
+    <section id="forums" class="py-16 bg-white border-b border-slate-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading-bold text-4xl uppercase mb-20 italic">Strategic <span class="gold-accent">Expertise</span></h2>
+            <div class="flex items-center gap-4 mb-10">
+                <h3 class="text-xl font-bold uppercase italic">Judicial <span class="gold-accent">Presence</span></h3>
+                <div class="flex-1 h-[1px] bg-slate-100"></div>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <span class="px-4 py-2 border border-slate-200 text-[9px] font-bold uppercase tracking-widest text-slate-500">Kalyan District Court</span>
+                <span class="px-4 py-2 border border-slate-200 text-[9px] font-bold uppercase tracking-widest text-slate-500">Bombay High Court</span>
+                <span class="px-4 py-2 border border-slate-200 text-[9px] font-bold uppercase tracking-widest text-slate-500">MahaRERA Tribunal</span>
+                <span class="px-4 py-2 border border-slate-200 text-[9px] font-bold uppercase tracking-widest text-slate-500">MSME Council</span>
+                <span class="px-4 py-2 border border-slate-200 text-[9px] font-bold uppercase tracking-widest text-slate-500">Consumer Forums</span>
+                <span class="px-4 py-2 border border-slate-200 text-[9px] font-bold uppercase tracking-widest text-slate-500">Arbitration Tribunals</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="practice" class="py-24 bg-white scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold uppercase mb-20 italic">Strategic <span class="gold-accent">Expertise</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
                 <div class="legal-border">
                     <h3 class="heading-bold text-lg uppercase mb-8 text-[#0F172A]">Corporate & Commercial</h3>
@@ -119,24 +129,24 @@
                 <div class="legal-border border-[#0F172A]">
                     <h3 class="heading-bold text-lg uppercase mb-8 text-[#0F172A]">Judicial Defense</h3>
                     <div class="space-y-8 text-sm text-slate-600">
-                        <p><strong>Trials:</strong> Strategic high-stakes defense in criminal proceedings and bail applications with an 82% favorable outcome rate.</p>
-                        <p><strong>Appeals:</strong> Expertise in superior forum appeals, stay orders, and constitutional mandates with absolute integrity.</p>
+                        <p><strong>Trials:</strong> Strategic defense in criminal proceedings and bail applications with an 82% favorable outcome rate.</p>
+                        <p><strong>Appeals:</strong> Expertise in superior forum appeals, stay orders, and constitutional mandates.</p>
                     </div>
                 </div>
                 <div class="legal-border">
                     <h3 class="heading-bold text-lg uppercase mb-8 text-[#0F172A]">Property & Recovery</h3>
                     <div class="space-y-8 text-sm text-slate-600">
-                        <p><strong>Asset Recovery:</strong> Secured and recovered over **₹25+ Crores** in industrial and corporate assets under the MSMED Act.</p>
-                        <p><strong>Real Estate:</strong> Title searches, ancestral disputes, and MahaRERA tribunal representation for housing rights.</p>
+                        <p><strong>Asset Recovery:</strong> Secured and recovered over **₹25+ Crores** in industrial assets under the MSMED Act.</p>
+                        <p><strong>Real Estate:</strong> Title searches, ancestral disputes, and MahaRERA tribunal representation.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="reviews" class="py-24 bg-slate-50 scroll-mt-24">
+    <section id="reviews" class="py-24 bg-slate-50 border-t border-slate-200 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading-bold text-4xl uppercase mb-16 italic">Client <span class="gold-accent">Outcomes</span></h2>
+            <h2 class="text-4xl font-bold uppercase mb-16 italic">Client <span class="gold-accent">Outcomes</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="p-10 border border-slate-200 bg-white shadow-sm flex flex-col justify-between">
                     <div>
@@ -154,7 +164,7 @@
                             <div class="client-badge">SM</div>
                             <span class="bg-[#C5A059] text-[#0F172A] text-[8px] font-black px-3 py-1 uppercase">Tech Founder</span>
                         </div>
-                        <p class="text-slate-600 text-sm leading-relaxed italic border-l-2 border-[#0F172A] pl-4">"Precision in international SaaS contracts is rare. They drafted our MSAs perfectly, protecting our IP."</p>
+                        <p class="text-slate-600 text-sm leading-relaxed italic border-l-2 border-[#0F172A] pl-4">"Precision in international SaaS contracts is rare. They drafted our MSAs perfectly."</p>
                     </div>
                     <h4 class="font-bold text-[9px] uppercase mt-8 text-slate-400">— Saira M., CEO</h4>
                 </div>
@@ -164,7 +174,7 @@
                             <div class="client-badge">VS</div>
                             <span class="bg-slate-500 text-white text-[8px] font-black px-3 py-1 uppercase">Criminal Defense</span>
                         </div>
-                        <p class="text-slate-600 text-sm leading-relaxed italic border-l-2 border-slate-400 pl-4">"Strategic defense in court gave my family hope and eventually a favorable verdict. Professional throughout."</p>
+                        <p class="text-slate-600 text-sm leading-relaxed italic border-l-2 border-slate-400 pl-4">"Strategic defense in court gave my family hope and eventually a favorable verdict."</p>
                     </div>
                     <h4 class="font-bold text-[9px] uppercase mt-8 text-slate-400">— Vikram S.</h4>
                 </div>
@@ -172,9 +182,9 @@
         </div>
     </section>
 
-    <footer id="contact" class="bg-[#0F172A] text-white py-24 text-center scroll-mt-24">
+    <footer id="contact" class="bg-[#0F172A] text-white py-24 text-center scroll-mt-20">
         <div class="max-w-2xl mx-auto px-6">
-            <h2 class="heading-bold text-3xl gold-accent mb-4 uppercase italic">Judicial Case Review</h2>
+            <h2 class="text-3xl font-bold gold-accent mb-4 uppercase italic">Judicial Case Review</h2>
             <p class="text-slate-500 text-[10px] tracking-[0.4em] uppercase mb-12">Confidential Inquiry Portal</p>
             <div id="inquiry-form" class="bg-white/5 p-12 border border-white/10 rounded">
                 <form onsubmit="handleInquiry(event)" class="space-y-6 text-left">
