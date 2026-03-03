@@ -6,13 +6,13 @@
     <title>The Partners | Smith & Partners Global</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
     <style>
         :root { --navy: #0F172A; --gold: #C5A059; }
-        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         
-        /* Refined Card Proportions */
         .partner-card {
             border: 1px solid #e2e8f0;
             background: white;
@@ -29,7 +29,6 @@
             position: relative;
             overflow: hidden;
             background: var(--navy);
-            /* Changed from 3/4 to 4/5 for a more moderate height */
             aspect-ratio: 4 / 3.5; 
         }
 
@@ -55,21 +54,50 @@
         .partner-card:hover .gold-line {
             width: 60px;
         }
+
+        #mobile-overlay.active {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="antialiased text-slate-900">
 
-    <nav class="bg-[#0F172A] text-white sticky top-0 z-50 border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex flex-col">
-                <span class="text-xl font-black uppercase tracking-tighter leading-none">Smith & Partners</span>
-                <span class="text-[8px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
+    <div class="bg-[#0F172A] text-white py-2.5 text-[9px] font-black uppercase tracking-[0.2em] border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <span><i class="fa-solid fa-gavel mr-2 text-[#C5A059]"></i> Attorney Advertising</span>
+            <span class="hidden md:block italic text-slate-400">London • New York • Washington D.C.</span>
+        </div>
+    </div>
+
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
+            <a href="index.html" class="flex flex-col text-left hover:opacity-80 transition">
+                <span class="text-xl md:text-2xl font-black uppercase tracking-tighter text-[#0F172A] leading-none">Smith & Partners</span>
+                <span class="text-[8px] md:text-[9px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-10 text-[11px] font-extrabold uppercase tracking-widest text-[#0F172A]">
+                <a href="index.html" class="hover:text-[#C5A059] transition">Overview</a>
+                <a href="adv.html" class="text-[#C5A059] border-b-2 border-[#C5A059] pb-1">The Partners</a>
+                <a href="expertise.html" class="hover:text-[#C5A059] transition">Expertise</a>
+                <a href="newz.html" class="hover:text-[#C5A059] transition">News</a>
+                <a href="index.html#lead-intake" class="bg-[#0F172A] text-white px-7 py-3.5 hover:bg-[#C5A059] transition shadow-lg">Conflict Check</a>
             </div>
-            <div class="hidden lg:flex items-center gap-10 text-[9px] font-black uppercase tracking-[0.3em]">
-                <a href="#" class="hover:text-[#C5A059] transition">Overview</a>
-                <a href="#" class="text-[#C5A059]">The Partners</a>
-                <a href="#" class="hover:text-[#C5A059] transition">Expertise</a>
-                <button class="border border-[#C5A059] text-[#C5A059] px-6 py-3 hover:bg-[#C5A059] hover:text-white transition">Conflict Check</button>
+
+            <button id="menu-toggle" class="lg:hidden text-[#0F172A] text-2xl">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <div id="mobile-overlay" class="fixed inset-0 bg-[#0F172A] z-[60] flex flex-col justify-center items-center transform translate-x-full transition-transform duration-500 lg:hidden">
+            <button id="close-menu" class="absolute top-8 right-8 text-white text-3xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex flex-col items-center gap-8 text-center">
+                <a href="index.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Overview</a>
+                <a href="adv.html" class="text-[#C5A059] text-2xl font-black uppercase tracking-[0.2em]">The Partners</a>
+                <a href="expertise.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Expertise</a>
+                <a href="index.html#lead-intake" class="mt-4 border border-[#C5A059] text-[#C5A059] px-8 py-4 font-black uppercase tracking-widest text-xs">Conflict Check</a>
             </div>
         </div>
     </nav>
@@ -79,11 +107,11 @@
             <i class="fa-solid fa-scale-balanced text-[20rem]"></i>
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <span class="text-[#C5A059] font-black tracking-[0.5em] text-[10px] uppercase block mb-4">Leadership & Governance</span>
-            <h1 class="text-6xl md:text-8xl font-black leading-tight tracking-tighter uppercase">
+            <span class="text-[#C5A059] font-black tracking-[0.5em] text-[10px] uppercase block mb-4 text-center md:text-left">Leadership & Governance</span>
+            <h1 class="text-5xl md:text-8xl font-black leading-tight tracking-tighter uppercase text-center md:text-left">
                 The <span class="italic font-light text-slate-400">Partners.</span>
             </h1>
-            <p class="text-slate-400 max-w-2xl mt-6 text-sm leading-relaxed border-l border-slate-700 pl-6">
+            <p class="text-slate-400 max-w-2xl mt-6 text-sm leading-relaxed border-l-0 md:border-l border-slate-700 md:pl-6 text-center md:text-left">
                 Our partners are more than legal experts; they are strategic architects who navigate the intersection of law, global finance, and international policy.
             </p>
         </div>
@@ -93,7 +121,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div class="text-center">
-                    <span class="block text-3xl font-black text-[#0F172A]">$45M+</span>
+                    <span class="block text-3xl font-black text-[#0F172A]">$45B+</span>
                     <span class="text-[9px] uppercase font-black tracking-widest text-[#C5A059]">Assets Litigated</span>
                 </div>
                 <div class="text-center">
@@ -126,15 +154,15 @@
                                 <span class="text-[9px] font-black text-[#C5A059] uppercase tracking-[0.2em]">Senior Managing Partner</span>
                                 <h3 class="text-2xl font-black text-[#0F172A] mt-1 uppercase tracking-tighter">Sterling Vance</h3>
                             </div>
-                            <i class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></i>
+                            <a href="adv.html" class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></a>
                         </div>
                         <div class="gold-line mb-5"></div>
                         <p class="text-slate-500 text-xs leading-relaxed mb-6 font-medium">
                             Former Deputy Prosecutor with 20+ years in international M&A friction and hostile takeover defense.
                         </p>
                         <div class="flex gap-4 border-t border-slate-50 pt-4">
-                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-location-dot mr-1"></i> NY / LONDON</span>
-                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-briefcase mr-1"></i> M&A</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase"><i class="fa-solid fa-location-dot mr-1"></i> NY / London</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase"><i class="fa-solid fa-briefcase mr-1"></i> M&A Litigation</span>
                         </div>
                     </div>
                 </div>
@@ -149,15 +177,15 @@
                                 <span class="text-[9px] font-black text-[#C5A059] uppercase tracking-[0.2em]">Managing Director</span>
                                 <h3 class="text-2xl font-black text-[#0F172A] mt-1 uppercase tracking-tighter">Julianne Thorne</h3>
                             </div>
-                            <i class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></i>
+                            <a href="#" class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></a>
                         </div>
                         <div class="gold-line mb-5"></div>
                         <p class="text-slate-500 text-xs leading-relaxed mb-6 font-medium">
                             Specializes in high-stakes regulatory defense for Silicon Valley tech giants and sovereign funds.
                         </p>
                         <div class="flex gap-4 border-t border-slate-50 pt-4">
-                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-location-dot mr-1"></i> D.C. / HONG KONG</span>
-                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-briefcase mr-1"></i> GOVT</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase"><i class="fa-solid fa-location-dot mr-1"></i> D.C. / Hong Kong</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase"><i class="fa-solid fa-briefcase mr-1"></i> Tech Gov</span>
                         </div>
                     </div>
                 </div>
@@ -172,15 +200,15 @@
                                 <span class="text-[9px] font-black text-[#C5A059] uppercase tracking-[0.2em]">Head of Litigation</span>
                                 <h3 class="text-2xl font-black text-[#0F172A] mt-1 uppercase tracking-tighter">Arthur Litt</h3>
                             </div>
-                            <i class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></i>
+                            <a href="#" class="fa-solid fa-up-right-from-square text-slate-300 group-hover:text-[#C5A059] transition"></a>
                         </div>
                         <div class="gold-line mb-5"></div>
                         <p class="text-slate-500 text-xs leading-relaxed mb-6 font-medium">
                             The firm’s lead trial strategist, known for unprecedented success in complex financial forensic cases.
                         </p>
                         <div class="flex gap-4 border-t border-slate-50 pt-4">
-                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-location-dot mr-1"></i> LONDON / ZURICH</span>
-                            <span class="text-[9px] font-bold text-slate-400"><i class="fa-solid fa-briefcase mr-1"></i> FINANCE</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase"><i class="fa-solid fa-location-dot mr-1"></i> London / Zurich</span>
+                            <span class="text-[9px] font-bold text-slate-400 uppercase"><i class="fa-solid fa-briefcase mr-1"></i> Forensic Finance</span>
                         </div>
                     </div>
                 </div>
@@ -239,5 +267,21 @@
         </div>
     </footer>
 
+    <script>
+        // Menu Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        menuToggle.addEventListener('click', () => {
+            mobileOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
 </body>
 </html>
