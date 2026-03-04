@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Partners | Smith & Partners Global</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -13,50 +14,55 @@
         body { font-family: 'Inter', sans-serif; background-color: #fcfcfc; scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         
+        /* Partner Card Animations */
         .partner-card {
             border: 1px solid #e2e8f0;
             background: white;
             transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
-
         .partner-card:hover {
             border-color: var(--gold);
             transform: translateY(-8px);
             box-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.15);
         }
-
         .image-container {
             position: relative;
             overflow: hidden;
             background: var(--navy);
             aspect-ratio: 4 / 3.5; 
         }
-
         .partner-img {
             filter: grayscale(100%);
             transition: all 0.8s ease;
             object-fit: cover;
             object-position: top;
         }
-
         .partner-card:hover .partner-img {
             filter: grayscale(0%);
             transform: scale(1.03);
         }
-
         .gold-line {
             width: 30px;
             height: 2px;
             background: var(--gold);
             transition: width 0.4s ease;
         }
-
         .partner-card:hover .gold-line {
             width: 60px;
         }
 
-        #mobile-overlay.active {
-            transform: translateX(0);
+        /* Floating Menu Logic */
+        #mobile-menu {
+            display: none;
+            transform-origin: top right;
+            transition: all 0.2s ease-out;
+            opacity: 0;
+            transform: scale(0.95) translateY(-10px);
+        }
+        #mobile-menu.active {
+            display: block;
+            opacity: 1;
+            transform: scale(1) translateY(0);
         }
     </style>
 </head>
@@ -70,7 +76,7 @@
     </div>
 
     <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between relative">
             <a href="index.html" class="flex flex-col text-left hover:opacity-80 transition">
                 <span class="text-xl md:text-2xl font-black uppercase tracking-tighter text-[#0F172A] leading-none">Smith & Partners</span>
                 <span class="text-[8px] md:text-[9px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
@@ -81,23 +87,36 @@
                 <a href="adv.html" class="text-[#C5A059] border-b-2 border-[#C5A059] pb-1">The Partners</a>
                 <a href="expertise.html" class="hover:text-[#C5A059] transition">Expertise</a>
                 <a href="newz.html" class="hover:text-[#C5A059] transition">News</a>
-                <a href="index.html#lead-intake" class="bg-[#0F172A] text-white px-7 py-3.5 hover:bg-[#C5A059] transition shadow-lg">Conflict Check</a>
+                <a href="index.html#lead-intake" class="bg-[#0F172A] text-white px-7 py-3.5 hover:bg-[#C5A059] transition shadow-lg uppercase tracking-widest">
+                    Conflict Check
+                </a>
             </div>
 
-            <button id="menu-toggle" class="lg:hidden text-[#0F172A] text-2xl">
-                <i class="fa-solid fa-bars-staggered"></i>
-            </button>
-        </div>
+            <div class="flex lg:hidden items-center gap-4">
+                <button id="menu-btn" class="text-[#0F172A] text-xl p-2 bg-slate-50 rounded border border-slate-100">
+                    <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
+                </button>
+            </div>
 
-        <div id="mobile-overlay" class="fixed inset-0 bg-[#0F172A] z-[60] flex flex-col justify-center items-center transform translate-x-full transition-transform duration-500 lg:hidden">
-            <button id="close-menu" class="absolute top-8 right-8 text-white text-3xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="flex flex-col items-center gap-8 text-center">
-                <a href="index.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Overview</a>
-                <a href="adv.html" class="text-[#C5A059] text-2xl font-black uppercase tracking-[0.2em]">The Partners</a>
-                <a href="expertise.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Expertise</a>
-                <a href="index.html#lead-intake" class="mt-4 border border-[#C5A059] text-[#C5A059] px-8 py-4 font-black uppercase tracking-widest text-xs">Conflict Check</a>
+            <div id="mobile-menu" class="absolute top-20 right-6 w-56 bg-[#0F172A] rounded-xl shadow-2xl p-2 z-[60]">
+                <div class="flex flex-col text-[10px] font-black uppercase tracking-[0.15em] text-white">
+                    <a href="index.html" class="hover:bg-white/10 p-4 rounded-lg transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-house text-[#C5A059] w-4"></i> Overview
+                    </a>
+                    <a href="adv.html" class="bg-white/10 text-[#C5A059] p-4 rounded-lg flex items-center gap-3 border-l-2 border-[#C5A059]">
+                        <i class="fa-solid fa-users w-4"></i> The Partners
+                    </a>
+                    <a href="expertise.html" class="hover:bg-white/10 p-4 rounded-lg transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-scale-balanced text-[#C5A059] w-4"></i> Expertise
+                    </a>
+                    <a href="newz.html" class="hover:bg-white/10 p-4 rounded-lg transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-newspaper text-[#C5A059] w-4"></i> News
+                    </a>
+                    <div class="h-[1px] bg-white/10 my-1"></div>
+                    <a href="index.html#lead-intake" class="text-[#C5A059] p-4 flex items-center gap-3 hover:bg-white/5 rounded-lg">
+                        <i class="fa-solid fa-file-shield w-4"></i> Conflict Check
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -146,7 +165,7 @@
                 
                 <div class="partner-card group">
                     <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" class="partner-img w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" class="partner-img w-full h-full" alt="Sterling Vance">
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
@@ -169,7 +188,7 @@
 
                 <div class="partner-card group">
                     <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" class="partner-img w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" class="partner-img w-full h-full" alt="Julianne Thorne">
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
@@ -192,7 +211,7 @@
 
                 <div class="partner-card group">
                     <div class="image-container">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="partner-img w-full h-full">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" class="partner-img w-full h-full" alt="Arthur Litt">
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
@@ -268,19 +287,24 @@
     </footer>
 
     <script>
-        // Menu Toggle Logic
-        const menuToggle = document.getElementById('menu-toggle');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileOverlay = document.getElementById('mobile-overlay');
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
 
-        menuToggle.addEventListener('click', () => {
-            mobileOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menu.classList.toggle('active');
+            icon.classList.toggle('fa-bars-staggered');
+            icon.classList.toggle('fa-xmark');
         });
 
-        closeMenu.addEventListener('click', () => {
-            mobileOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.remove('active');
+                icon.classList.add('fa-bars-staggered');
+                icon.classList.remove('fa-xmark');
+            }
         });
     </script>
 </body>
