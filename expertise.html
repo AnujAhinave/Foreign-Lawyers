@@ -36,6 +36,20 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Compact Overlay Menu Animation */
+        #mobile-menu {
+            display: none;
+            transform-origin: top right;
+            transition: all 0.2s ease-out;
+            opacity: 0;
+            transform: scale(0.95) translateY(-10px);
+        }
+        #mobile-menu.active {
+            display: block;
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -48,7 +62,7 @@
     </div>
 
     <nav class="bg-white border-b sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between relative">
             <a href="index.html" class="flex flex-col text-left hover:opacity-80 transition">
                 <span class="text-xl md:text-2xl font-black uppercase tracking-tighter text-[#0F172A] leading-none">Smith & Partners</span>
                 <span class="text-[8px] md:text-[9px] tracking-[0.4em] text-[#C5A059] font-bold uppercase mt-1">Global Counselors</span>
@@ -64,29 +78,38 @@
                 </a>
             </div>
 
-            <div class="flex lg:hidden items-center gap-6">
+            <div class="flex lg:hidden items-center gap-4">
                 <a href="adv.html#lead-intake" class="text-[#0F172A] text-lg">
                     <i class="fa-solid fa-file-shield"></i>
                 </a>
-                <button id="menu-toggle" class="text-[#0F172A] text-xl p-2">
-                    <i class="fa-solid fa-bars-staggered"></i>
+                <button id="menu-btn" class="text-[#0F172A] text-xl p-2 bg-slate-50 rounded border border-slate-100">
+                    <i class="fa-solid fa-bars-staggered" id="menu-icon"></i>
                 </button>
             </div>
-        </div>
 
-        <div id="mobile-overlay" class="fixed inset-0 bg-[#0F172A] z-[60] flex flex-col justify-center items-center transform translate-x-full transition-transform duration-500 lg:hidden">
-            <button id="close-menu" class="absolute top-8 right-8 text-white text-3xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="flex flex-col items-center gap-8 text-center">
-                <a href="index.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Overview</a>
-                <a href="adv.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">Our Partners</a>
-                <a href="expertise.html" class="text-[#C5A059] text-2xl font-black uppercase tracking-[0.2em]">Expertise</a>
-                <a href="newz.html" class="text-white text-2xl font-black uppercase tracking-[0.2em]">News</a>
-                <a href="adv.html#lead-intake" class="mt-4 border border-[#C5A059] text-[#C5A059] px-8 py-4 font-black uppercase tracking-widest text-xs">Conflict Check</a>
+            <div id="mobile-menu" class="absolute top-20 right-6 w-56 bg-[#0F172A] rounded-xl shadow-2xl p-2 z-[60]">
+                <div class="flex flex-col text-[10px] font-black uppercase tracking-[0.15em] text-white">
+                    <a href="index.html" class="hover:bg-white/10 p-4 rounded-lg transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-house text-[#C5A059] w-4"></i> Overview
+                    </a>
+                    <a href="adv.html" class="hover:bg-white/10 p-4 rounded-lg transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-users text-[#C5A059] w-4"></i> Our Partners
+                    </a>
+                    <a href="expertise.html" class="bg-white/10 text-[#C5A059] p-4 rounded-lg flex items-center gap-3 border-l-2 border-[#C5A059]">
+                        <i class="fa-solid fa-scale-balanced w-4"></i> Expertise
+                    </a>
+                    <a href="newz.html" class="hover:bg-white/10 p-4 rounded-lg transition-colors flex items-center gap-3">
+                        <i class="fa-solid fa-newspaper text-[#C5A059] w-4"></i> News
+                    </a>
+                    <div class="h-[1px] bg-white/10 my-1"></div>
+                    <a href="adv.html#lead-intake" class="text-[#C5A059] p-4 flex items-center gap-3 hover:bg-white/5 rounded-lg">
+                        <i class="fa-solid fa-file-shield w-4"></i> Conflict Check
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
+
     <header class="hero-gradient py-32 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <span class="text-[#C5A059] font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Strategic Disciplines</span>
@@ -115,7 +138,7 @@
                     </ul>
                 </div>
 
-                <div class="bg-[#0F172A] p-12 practice-card flex flex-col justify-between text-white border-none shadow-2xl scale-105">
+                <div class="bg-[#0F172A] p-12 practice-card flex flex-col justify-between text-white border-none shadow-2xl lg:scale-105">
                     <div>
                         <div class="text-[#C5A059] text-3xl mb-10"><i class="fa-solid fa-shield-halved"></i></div>
                         <h3 class="text-2xl font-bold mb-6 uppercase tracking-tight gold-gradient-text">White Collar Defense</h3>
@@ -202,26 +225,24 @@
     </footer>
 
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileOverlay = document.getElementById('mobile-overlay');
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
 
-        menuToggle.addEventListener('click', () => {
-            mobileOverlay.classList.remove('translate-x-full');
-            document.body.style.overflow = 'hidden'; 
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menu.classList.toggle('active');
+            icon.classList.toggle('fa-bars-staggered');
+            icon.classList.toggle('fa-xmark');
         });
 
-        closeMenu.addEventListener('click', () => {
-            mobileOverlay.classList.add('translate-x-full');
-            document.body.style.overflow = 'auto'; 
-        });
-
-        const mobileLinks = mobileOverlay.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileOverlay.classList.add('translate-x-full');
-                document.body.style.overflow = 'auto';
-            });
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.remove('active');
+                icon.classList.add('fa-bars-staggered');
+                icon.classList.remove('fa-xmark');
+            }
         });
     </script>
 </body>
